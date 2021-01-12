@@ -1,10 +1,10 @@
 {
-  "name": "ha-components",
+  "name": "ha-react",
   "version": "1.0.0",
   "description": "Human Agency React components library",
   "author": "valdemarua",
   "license": "MIT",
-  "repository": "valdemarua/ha-components",
+  "repository": "valdemarua/ha-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

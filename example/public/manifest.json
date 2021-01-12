@@ -1,6 +1,6 @@
 {
-  "short_name": "ha-components",
-  "name": "ha-components",
+  "short_name": "ha-react",
+  "name": "ha-react",
   "icons": [
     {
       "src": "favicon.ico",
