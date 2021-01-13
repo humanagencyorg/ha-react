@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MentionsInput component when textarea prop is true matches snaphot 1`] = `
+.c0 {
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.c0:focus {
+  background-color: #fff;
+}
+
+.c0:focus {
+  box-shadow: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::-moz-placeholder {
+  color: #bdbdbd;
+}
+
+.c0:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::placeholder {
+  color: #bdbdbd;
+}
+
+<MentionsInput
+  defaultValue="title"
+  name="Name"
+  placeholder="placeholder"
+  readOnly={false}
+  steps={
+    Array [
+      Object {
+        "loadList": [Function],
+        "referencePrefix": "",
+        "title": "",
+        "type": "",
+      },
+    ]
+  }
+  textarea={true}
+>
+  <style__StyledTextarea
+    name="Name"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="placeholder"
+    value="title"
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "style__StyledTextarea-oaq4e-0",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "background-color:#fff;border-width:0;margin:0;min-height:82px;font-weight:500;font-size:16px;line-height:24px;&:focus{background-color:#fff;}",
+              "border-radius:8px 8px 0px 0px;padding:12px 16px;box-sizing:border-box;&:focus{box-shadow:none;}&::placeholder{color:#bdbdbd;}",
+            ],
+          },
+          "displayName": "style__StyledTextarea",
+          "foldedComponentIds": Array [
+            "globals__Textarea-sc-1oes5rv-6",
+          ],
+          "render": [Function],
+          "styledComponentId": "style__StyledTextarea-oaq4e-0",
+          "target": "textarea",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={
+        Object {
+          "current": .c0 {
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.c0:focus {
+  background-color: #fff;
+}
+
+.c0:focus {
+  box-shadow: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::-moz-placeholder {
+  color: #bdbdbd;
+}
+
+.c0:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::placeholder {
+  color: #bdbdbd;
+}
+
+<textarea
+            class="c0"
+            name="Name"
+            placeholder="placeholder"
+          >
+            title
+          </textarea>,
+        }
+      }
+      name="Name"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="placeholder"
+      value="title"
+    >
+      <textarea
+        className="c0"
+        name="Name"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="placeholder"
+        value="title"
+      />
+    </StyledComponent>
+  </style__StyledTextarea>
+</MentionsInput>
+`;
+
+exports[`MentionsInput component when textarea prop is true when textarea prop is false matches snaphot 1`] = `
+.c2 {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #333;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.c2:hover {
+  opacity: 1;
+}
+
+.c1 {
+  background-color: #fff;
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.c1:focus {
+  border-width: 0px;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+<MentionsInput
+  defaultValue="title"
+  name="Name"
+  placeholder="placeholder"
+  readOnly={true}
+  steps={
+    Array [
+      Object {
+        "loadList": [Function],
+        "referencePrefix": "",
+        "title": "",
+        "type": "",
+      },
+    ]
+  }
+  textarea={false}
+>
+  <div
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <Input
+      autocomplete="off"
+      name="Name"
+      noMargin={true}
+      onChange={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search free response blocks"
+      readOnly={true}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      value="title"
+    >
+      <style__InputWrapper
+        noMargin={true}
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "style__InputWrapper-sc-7slhas-4",
+                "isStatic": false,
+                "lastClassName": "c0",
+                "rules": Array [
+                  "display:flex;align-items:stretch;position:relative;margin:",
+                  [Function],
+                  ";width:100%;",
+                ],
+              },
+              "displayName": "style__InputWrapper",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "style__InputWrapper-sc-7slhas-4",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          noMargin={true}
+        >
+          <div
+            className="c0"
+          >
+            <style__StyledInput
+              autocomplete="off"
+              name="Name"
+              noMargin={true}
+              onChange={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Search free response blocks"
+              readOnly={true}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              value="title"
+            >
+              <StyledComponent
+                autocomplete="off"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [
+                      [Function],
+                    ],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "style__StyledInput-sc-7slhas-0",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "background-color:",
+                        [Function],
+                        ";padding:0.5rem;padding-left:15px;padding-right:15px;border-radius:8px;border-width:0;width:100%;margin:0;&:focus{border-width:0px;background-color:#fff;box-shadow:none;}",
+                      ],
+                    },
+                    "displayName": "style__StyledInput",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "style__StyledInput-sc-7slhas-0",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                name="Name"
+                noMargin={true}
+                onChange={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Search free response blocks"
+                readOnly={true}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                value="title"
+              >
+                <input
+                  className="c1"
+                  name="Name"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Search free response blocks"
+                  readOnly={true}
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                    }
+                  }
+                  type="text"
+                  value="title"
+                />
+              </StyledComponent>
+            </style__StyledInput>
+          </div>
+        </StyledComponent>
+      </style__InputWrapper>
+    </Input>
+    <style__ClearIcon
+      data-testid="MentionsInput/ClearIcon"
+      onClick={[Function]}
+      size={20}
+    >
+      <StyledComponent
+        data-testid="MentionsInput/ClearIcon"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "style__ClearIcon-oaq4e-1",
+              "isStatic": false,
+              "lastClassName": "c2",
+              "rules": Array [
+                "position:absolute;top:50%;right:12px;transform:translateY(-50%);color:#333;opacity:0.6;cursor:pointer;&:hover{opacity:1;}",
+              ],
+            },
+            "displayName": "style__ClearIcon",
+            "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "color": [Function],
+              "size": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "style__ClearIcon-oaq4e-1",
+            "target": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "X",
+              "propTypes": Object {
+                "color": [Function],
+                "size": [Function],
+              },
+              "render": [Function],
+            },
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        onClick={[Function]}
+        size={20}
+      >
+        <X
+          className="c2"
+          data-testid="MentionsInput/ClearIcon"
+          onClick={[Function]}
+          size={20}
+        >
+          <svg
+            className="c2"
+            data-testid="MentionsInput/ClearIcon"
+            fill="none"
+            height={20}
+            onClick={[Function]}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </X>
+      </StyledComponent>
+    </style__ClearIcon>
+  </div>
+</MentionsInput>
+`;
