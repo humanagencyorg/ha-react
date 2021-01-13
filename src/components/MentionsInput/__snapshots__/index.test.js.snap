@@ -40,6 +40,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
 
 <MentionsInput
   defaultValue="title"
+  experienceId="abc"
   name="Name"
   placeholder="placeholder"
   readOnly={false}
@@ -55,7 +56,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
   }
   textarea={true}
 >
-  <style__StyledTextarea
+  <Styled(styled.textarea)
     name="Name"
     onChange={[Function]}
     onKeyDown={[Function]}
@@ -68,20 +69,44 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "style__StyledTextarea-oaq4e-0",
+            "componentId": "sc-cSHVUG",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "background-color:#fff;border-width:0;margin:0;min-height:82px;font-weight:500;font-size:16px;line-height:24px;&:focus{background-color:#fff;}",
-              "border-radius:8px 8px 0px 0px;padding:12px 16px;box-sizing:border-box;&:focus{box-shadow:none;}&::placeholder{color:#bdbdbd;}",
+              "
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:focus {
+    background-color: #fff;
+  }
+",
+              "
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+",
             ],
           },
-          "displayName": "style__StyledTextarea",
+          "displayName": "Styled(styled.textarea)",
           "foldedComponentIds": Array [
-            "globals__Textarea-sc-1oes5rv-6",
+            "sc-bZQynM",
           ],
           "render": [Function],
-          "styledComponentId": "style__StyledTextarea-oaq4e-0",
+          "styledComponentId": "sc-cSHVUG",
           "target": "textarea",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -151,7 +176,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
         value="title"
       />
     </StyledComponent>
-  </style__StyledTextarea>
+  </Styled(styled.textarea)>
 </MentionsInput>
 `;
 
@@ -205,6 +230,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
 
 <MentionsInput
   defaultValue="title"
+  experienceId="abc"
   name="Name"
   placeholder="placeholder"
   readOnly={true}
@@ -243,7 +269,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
       }
       value="title"
     >
-      <style__InputWrapper
+      <styled.div
         noMargin={true}
       >
         <StyledComponent
@@ -252,19 +278,25 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "style__InputWrapper-sc-7slhas-4",
+                "componentId": "sc-jKJlTe",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
-                  "display:flex;align-items:stretch;position:relative;margin:",
+                  "
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  margin: ",
                   [Function],
-                  ";width:100%;",
+                  ";
+  width: 100%;
+",
                 ],
               },
-              "displayName": "style__InputWrapper",
+              "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "style__InputWrapper-sc-7slhas-4",
+              "styledComponentId": "sc-jKJlTe",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -277,7 +309,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
           <div
             className="c0"
           >
-            <style__StyledInput
+            <styled.input
               autocomplete="off"
               name="Name"
               noMargin={true}
@@ -302,19 +334,34 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
                       [Function],
                     ],
                     "componentStyle": ComponentStyle {
-                      "componentId": "style__StyledInput-sc-7slhas-0",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
-                        "background-color:",
+                        "
+  background-color: ",
                         [Function],
-                        ";padding:0.5rem;padding-left:15px;padding-right:15px;border-radius:8px;border-width:0;width:100%;margin:0;&:focus{border-width:0px;background-color:#fff;box-shadow:none;}",
+                        ";
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+
+  &:focus {
+    border-width: 0px;
+    background-color: #fff;
+    box-shadow: none;
+  }
+",
                       ],
                     },
-                    "displayName": "style__StyledInput",
+                    "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "style__StyledInput-sc-7slhas-0",
+                    "styledComponentId": "sc-kGXeez",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -353,12 +400,12 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
                   value="title"
                 />
               </StyledComponent>
-            </style__StyledInput>
+            </styled.input>
           </div>
         </StyledComponent>
-      </style__InputWrapper>
+      </styled.div>
     </Input>
-    <style__ClearIcon
+    <Styled(X)
       data-testid="MentionsInput/ClearIcon"
       onClick={[Function]}
       size={20}
@@ -370,21 +417,33 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "style__ClearIcon-oaq4e-1",
+              "componentId": "sc-kAzzGY",
               "isStatic": false,
               "lastClassName": "c2",
               "rules": Array [
-                "position:absolute;top:50%;right:12px;transform:translateY(-50%);color:#333;opacity:0.6;cursor:pointer;&:hover{opacity:1;}",
+                "
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #333;
+  opacity: 0.6;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+",
               ],
             },
-            "displayName": "style__ClearIcon",
+            "displayName": "Styled(X)",
             "foldedComponentIds": Array [],
             "propTypes": Object {
               "color": [Function],
               "size": [Function],
             },
             "render": [Function],
-            "styledComponentId": "style__ClearIcon-oaq4e-1",
+            "styledComponentId": "sc-kAzzGY",
             "target": Object {
               "$$typeof": Symbol(react.forward_ref),
               "displayName": "X",
@@ -438,7 +497,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
           </svg>
         </X>
       </StyledComponent>
-    </style__ClearIcon>
+    </Styled(X)>
   </div>
 </MentionsInput>
 `;

@@ -12,6 +12,7 @@ exports[`OptionsList component renders first step 1`] = `
 <OptionsList
   currentItemIndex={0}
   currentItemRef={[Function]}
+  experienceId="abc"
   handleLastSelect={[Function]}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
@@ -26,7 +27,7 @@ exports[`OptionsList component renders first step 1`] = `
     ]
   }
 >
-  <style__Container
+  <styled.div
     data-testid="MentionsInput/OptionsList"
   >
     <StyledComponent
@@ -36,17 +37,23 @@ exports[`OptionsList component renders first step 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "style__Container-zko08c-0",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "position:absolute;width:100%;height:0px;left:0;z-index:2;",
+              "
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  z-index: 2;
+",
             ],
           },
-          "displayName": "style__Container",
+          "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "style__Container-zko08c-0",
+          "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -428,7 +435,7 @@ exports[`OptionsList component renders first step 1`] = `
         </WithStyles(ForwardRef(List))>
       </div>
     </StyledComponent>
-  </style__Container>
+  </styled.div>
 </OptionsList>
 `;
 
@@ -444,6 +451,7 @@ exports[`OptionsList component renders loader 1`] = `
 <OptionsList
   currentItemIndex={0}
   currentItemRef={[Function]}
+  experienceId="abc"
   handleLastSelect={[Function]}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
@@ -458,7 +466,7 @@ exports[`OptionsList component renders loader 1`] = `
     ]
   }
 >
-  <style__Container
+  <styled.div
     data-testid="MentionsInput/OptionsList"
   >
     <StyledComponent
@@ -468,17 +476,23 @@ exports[`OptionsList component renders loader 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "style__Container-zko08c-0",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "position:absolute;width:100%;height:0px;left:0;z-index:2;",
+              "
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  z-index: 2;
+",
             ],
           },
-          "displayName": "style__Container",
+          "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "style__Container-zko08c-0",
+          "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -565,11 +579,13 @@ exports[`OptionsList component renders loader 1`] = `
                         classes={
                           Object {
                             "circle": "MuiCircularProgress-circle",
+                            "circleDeterminate": "MuiCircularProgress-circleDeterminate",
                             "circleDisableShrink": "MuiCircularProgress-circleDisableShrink",
                             "circleIndeterminate": "MuiCircularProgress-circleIndeterminate",
                             "circleStatic": "MuiCircularProgress-circleStatic",
                             "colorPrimary": "MuiCircularProgress-colorPrimary",
                             "colorSecondary": "MuiCircularProgress-colorSecondary",
+                            "determinate": "MuiCircularProgress-determinate",
                             "indeterminate": "MuiCircularProgress-indeterminate",
                             "root": "MuiCircularProgress-root",
                             "static": "MuiCircularProgress-static",
@@ -612,6 +628,6 @@ exports[`OptionsList component renders loader 1`] = `
         </WithStyles(ForwardRef(List))>
       </div>
     </StyledComponent>
-  </style__Container>
+  </styled.div>
 </OptionsList>
 `;

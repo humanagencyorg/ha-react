@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import 'jest-styled-components';
 import { act } from 'react-dom/test-utils';
 import toJson from 'enzyme-to-json';
-import OptionsList from './index';
+import { OptionsList } from './index';
 
 describe('OptionsList component', () => {
   it('renders loader', async () => {
@@ -23,6 +23,7 @@ describe('OptionsList component', () => {
       component = mount(
         <OptionsList
           steps={steps}
+          experienceId="abc"
           handleLastSelect={fn}
           setCurrentItemIndex={fn}
           currentItemIndex={0}
@@ -59,6 +60,7 @@ describe('OptionsList component', () => {
       component = mount(
         <OptionsList
           steps={steps}
+          experienceId="abc"
           handleLastSelect={fn}
           setCurrentItemIndex={fn}
           currentItemIndex={0}

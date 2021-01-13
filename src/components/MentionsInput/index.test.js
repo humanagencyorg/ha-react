@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
 import toJson from 'enzyme-to-json';
-import MentionsInput from './index';
+import { MentionsInput } from './index';
 
 describe('MentionsInput component', () => {
   describe('when textarea prop is true', () => {
@@ -20,6 +20,7 @@ describe('MentionsInput component', () => {
         name: 'Name',
         defaultValue: 'title',
         placeholder: 'placeholder',
+        experienceId: 'abc',
         textarea: true,
         readOnly: false,
       };
@@ -44,6 +45,7 @@ describe('MentionsInput component', () => {
           name: 'Name',
           defaultValue: 'title',
           placeholder: 'placeholder',
+          experienceId: 'abc',
           textarea: false,
           readOnly: true,
         };

@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
-import { ExperienceIdContext } from '../../BlockForm';
+import { useState, useEffect } from 'react';
 
 const sortExperiencesList = (list, experienceId) => {
   list.some((item, index) => {
@@ -14,13 +13,12 @@ const sortExperiencesList = (list, experienceId) => {
   return list;
 };
 
-export function usePreparedList(onComplete, steps) {
+export const usePreparedList = (onComplete, steps, experienceId) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [stepIndex, setStepIndex] = useState(0);
   const [currentList, setCurrentList] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [header, setHeader] = useState('');
-  const experienceId = useContext(ExperienceIdContext);
 
   useEffect(() => {
     setHeader(steps[stepIndex].title);
@@ -58,4 +56,4 @@ export function usePreparedList(onComplete, steps) {
     header,
     isLoaded,
   };
-}
+};

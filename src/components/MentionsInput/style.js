@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Textarea } from '../globals';
+import { Textarea } from '../Globals';
 import { X, Search } from 'react-feather';
 
 export const StyledTextarea = styled(Textarea)`

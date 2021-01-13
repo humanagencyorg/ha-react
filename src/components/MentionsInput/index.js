@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
 import { Input } from '../Input';
-import OptionsList from './OptionsList';
+import { OptionsList } from './OptionsList';
 import { getExperiencesList, getBlocksList, getMergeFields } from './api';
 
 const defaultSteps = [
@@ -26,14 +26,15 @@ const defaultSteps = [
   },
 ];
 
-function MentionsInput({
+export const MentionsInput = ({
   name,
   defaultValue,
   placeholder,
   textarea,
   steps: overridedSteps,
   readOnly,
-}) {
+  experienceId,
+}) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -185,7 +186,7 @@ function MentionsInput({
   };
 
   return (
-    <>
+    <React.Fragment>
       {textarea ? <Textarea {...inputProps} /> : renderReadonlyInput()}
       {dropdownIsOpen && (
         <OptionsList
@@ -195,11 +196,12 @@ function MentionsInput({
           listRef={listRef}
           currentItemRef={currentItemRef}
           setCurrentItemIndex={setCurrentItemIndex}
+          experienceId={experienceId}
         />
       )}
-    </>
+    </React.Fragment>
   );
-}
+};
 
 MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,
@@ -213,8 +215,7 @@ MentionsInput.propTypes = {
       loadList: PropTypes.func,
     }),
   ),
+  experienceId: PropTypes.string,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };
-
-export default MentionsInput;

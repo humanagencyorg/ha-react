@@ -58,18 +58,20 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function OptionsList({
+export const OptionsList = ({
   steps,
   handleLastSelect,
   currentItemIndex,
   listRef,
   currentItemRef,
   setCurrentItemIndex,
-}) {
+  experienceId,
+}) => {
   const classes = useStyles();
   const { preparedList, onSelect, header, isLoaded } = usePreparedList(
     handleLastSelect,
     steps,
+    experienceId,
   );
 
   const onHover = (index) => {
@@ -81,7 +83,7 @@ function OptionsList({
       <List className={classes.root} ref={listRef}>
         <ListSubheader className={classes.subheader}>{header}</ListSubheader>
         {isLoaded ? (
-          <>
+          <React.Fragment>
             {_isEmpty(preparedList) ? (
               <InnerWrapper>
                 <Search />
@@ -90,7 +92,7 @@ function OptionsList({
                 </EmptyResultsText>
               </InnerWrapper>
             ) : (
-              <>
+              <React.Fragment>
                 {preparedList.map((item, index) => {
                   const itemIsSelected = currentItemIndex === index;
                   return (
@@ -112,9 +114,9 @@ function OptionsList({
                     </ListItem>
                   );
                 })}
-              </>
+              </React.Fragment>
             )}
-          </>
+          </React.Fragment>
         ) : (
           <ListItem className={(classes.listItem, classes.centered)}>
             <CircularProgress className={classes.loader} />
@@ -123,7 +125,7 @@ function OptionsList({
       </List>
     </Container>
   );
-}
+};
 
 OptionsList.propTypes = {
   steps: PropTypes.arrayOf(
@@ -134,6 +136,7 @@ OptionsList.propTypes = {
       loadList: PropTypes.func,
     }),
   ).isRequired,
+  experienceId: PropTypes.string,
   handleLastSelect: PropTypes.func.isRequired,
   setCurrentItemIndex: PropTypes.func.isRequired,
   currentItemIndex: PropTypes.number.isRequired,
@@ -146,5 +149,3 @@ OptionsList.propTypes = {
     PropTypes.shape({ current: PropTypes.any }),
   ]),
 };
-
-export default OptionsList;
