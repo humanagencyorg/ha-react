@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["./.eslintrc.thoughtbot.json"],
+  "rules": {
+    "array-bracket-spacing": 2,
+    "no-debugger": 2,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": ["ArrowFunctionExpression"]
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "prefer-const": ["error"],
+    "no-console": ["error"]
+  }
+}

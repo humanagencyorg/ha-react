@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader component when no props provided matches snapshot 1`] = `
+.c0 {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="css-0"
+  >
+    <div
+      className="css-ybv0bb"
+    />
+    <div
+      className="css-c51fk9"
+    />
+    <div
+      className="css-uo8ju6"
+    />
+  </div>
+</div>
+`;
+
+exports[`Loader component when props provided matches snapshot 1`] = `
+.c0 {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+<div
+  className="c0"
+  data-testid="some fake test id"
+  style="display: none;"
+>
+  <div
+    className="css-0"
+  >
+    <div
+      className="css-ybv0bb"
+    />
+    <div
+      className="css-c51fk9"
+    />
+    <div
+      className="css-uo8ju6"
+    />
+  </div>
+</div>
+`;
