@@ -20,7 +20,7 @@ describe('MentionsInput component', () => {
         name: 'Name',
         defaultValue: 'title',
         placeholder: 'placeholder',
-        experienceId: 'abc',
+        experienceId: 1,
         textarea: true,
         readOnly: false,
       };
@@ -45,7 +45,7 @@ describe('MentionsInput component', () => {
           name: 'Name',
           defaultValue: 'title',
           placeholder: 'placeholder',
-          experienceId: 'abc',
+          experienceId: 1,
           textarea: false,
           readOnly: true,
         };

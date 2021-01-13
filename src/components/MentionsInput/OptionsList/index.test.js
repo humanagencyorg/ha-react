@@ -23,7 +23,7 @@ describe('OptionsList component', () => {
       component = mount(
         <OptionsList
           steps={steps}
-          experienceId="abc"
+          experienceId={1}
           handleLastSelect={fn}
           setCurrentItemIndex={fn}
           currentItemIndex={0}
@@ -60,7 +60,7 @@ describe('OptionsList component', () => {
       component = mount(
         <OptionsList
           steps={steps}
-          experienceId="abc"
+          experienceId={1}
           handleLastSelect={fn}
           setCurrentItemIndex={fn}
           currentItemIndex={0}

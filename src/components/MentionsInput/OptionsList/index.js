@@ -136,7 +136,7 @@ OptionsList.propTypes = {
       loadList: PropTypes.func,
     }),
   ).isRequired,
-  experienceId: PropTypes.string,
+  experienceId: PropTypes.number,
   handleLastSelect: PropTypes.func.isRequired,
   setCurrentItemIndex: PropTypes.func.isRequired,
   currentItemIndex: PropTypes.number.isRequired,

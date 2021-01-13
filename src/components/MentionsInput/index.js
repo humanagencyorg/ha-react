@@ -215,7 +215,7 @@ MentionsInput.propTypes = {
       loadList: PropTypes.func,
     }),
   ),
-  experienceId: PropTypes.string,
+  experienceId: PropTypes.number,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };

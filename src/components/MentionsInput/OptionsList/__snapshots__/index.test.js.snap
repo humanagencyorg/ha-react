@@ -12,7 +12,7 @@ exports[`OptionsList component renders first step 1`] = `
 <OptionsList
   currentItemIndex={0}
   currentItemRef={[Function]}
-  experienceId="abc"
+  experienceId={1}
   handleLastSelect={[Function]}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
@@ -451,7 +451,7 @@ exports[`OptionsList component renders loader 1`] = `
 <OptionsList
   currentItemIndex={0}
   currentItemRef={[Function]}
-  experienceId="abc"
+  experienceId={1}
   handleLastSelect={[Function]}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
