@@ -191,7 +191,7 @@ MentionsInput.propTypes = {
       referencePrefix: PropTypes.string,
       loadList: PropTypes.func,
     }),
-  ),
+  ).isRequired,
   experienceId: PropTypes.number,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
