@@ -3,35 +3,13 @@ import PropTypes from 'prop-types';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
 import { Input } from '../Input';
 import { OptionsList } from './OptionsList';
-import { getExperiencesList, getBlocksList, getMergeFields } from './api';
-
-const defaultSteps = [
-  {
-    type: 'experiences',
-    title: 'Experiences',
-    referencePrefix: 'experience_',
-    loadList: getExperiencesList,
-  },
-  {
-    type: 'blocks',
-    title: 'Blocks',
-    referencePrefix: 'block_',
-    loadList: getBlocksList,
-  },
-  {
-    type: 'merge_fields',
-    title: 'Block merge fields',
-    referencePrefix: '',
-    loadList: getMergeFields,
-  },
-];
 
 export const MentionsInput = ({
   name,
   defaultValue,
   placeholder,
   textarea,
-  steps: overridedSteps,
+  steps,
   readOnly,
   experienceId,
 }) => {
@@ -39,7 +17,6 @@ export const MentionsInput = ({
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [mentionSymbolPosition, setMentionSymbolPosition] = useState(0);
-  const [steps] = useState(overridedSteps || defaultSteps);
   const inputRef = useRef(null);
   const currentItemRef = useRef(null);
   const listRef = useRef(null);
