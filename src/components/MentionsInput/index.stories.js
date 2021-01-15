@@ -42,14 +42,14 @@ Textarea.args = {
   steps,
   name: 'Name',
   defaultValue: '',
-  placeholder: 'Search for experiences',
+  placeholder: 'e.g. Where should we eat dinner tonight?',
   experienceId: 1,
   textarea: true,
   readOnly: false,
 };
 
-export const Input = Template.bind({});
-Input.args = {
+export const ReadonlySelector = Template.bind({});
+ReadonlySelector.args = {
   steps,
   name: 'Name',
   defaultValue: '',

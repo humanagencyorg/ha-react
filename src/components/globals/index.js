@@ -51,6 +51,7 @@ export const Legend = styled.legend`
 `;
 
 export const Textarea = styled.textarea`
+  width: 100%;
   background-color: #fff;
   border-width: 0;
   margin: 0;
@@ -58,9 +59,12 @@ export const Textarea = styled.textarea`
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  box-sizing: border-box;
+  resize: vertical;
 
   &:focus {
     background-color: #fff;
+    outline: 0;
   }
 `;
 

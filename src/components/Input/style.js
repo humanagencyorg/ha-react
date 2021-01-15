@@ -11,11 +11,14 @@ export const StyledInput = styled.input.attrs((props) => ({
   border-width: 0;
   width: 100%;
   margin: 0;
+  box-sizing: border-box;
+  line-height: 2;
 
   &:focus {
     border-width: 0px;
     background-color: #fff;
     box-shadow: none;
+    outline: 0;
   }
 `;
 
