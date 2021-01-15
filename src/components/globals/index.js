@@ -51,6 +51,7 @@ export const Legend = styled.legend`
 `;
 
 export const Textarea = styled.textarea`
+  display: block;
   width: 100%;
   background-color: #fff;
   border-width: 0;

@@ -6,10 +6,8 @@ export default {
   component: MentionsInput,
   decorators: [
     (Story) => (
-      <div style={{ height: '500px' }}>
-        <div style={{ width: '536px', margin: '0 auto', paddingTop: '1em' }}>
-          <Story />
-        </div>
+      <div style={{ width: '536px', margin: '0 auto', paddingTop: '1em' }}>
+        <Story />
       </div>
     ),
   ],
@@ -60,7 +58,7 @@ ReadonlySelector.args = {
 };
 
 function getExperiencesList() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'First Experience', value: '1', subTitle: 'This Experience' },
       { title: 'Second Experience', value: '2' },
@@ -77,11 +75,21 @@ function getExperiencesList() {
 }
 
 function getBlocksList() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'Wonderwall', value: '1', subTitle: 'Multiple Choice' },
-      { title: 'Today is gonna be the day that theyre gonna throw it back to you', value: '2', subTitle: 'Free Response' },
-      { title: 'By now, you should have somehow realised what you gotta do I dont believe that anybody feels the way I do about you now', value: '3', subTitle: 'Payment' },
+      {
+        title:
+          'Today is gonna be the day that theyre gonna throw it back to you',
+        value: '2',
+        subTitle: 'Free Response',
+      },
+      {
+        title:
+          'By now, you should have somehow realised what you gotta do I dont believe that anybody feels the way I do about you now',
+        value: '3',
+        subTitle: 'Payment',
+      },
       { title: 'Live Forever', value: '4', subTitle: 'Yes / No' },
       { title: 'Shakermaker', value: '5', subTitle: 'Data Fields' },
       { title: 'Slide Away', value: '6', subTitle: 'Content' },
@@ -90,7 +98,7 @@ function getBlocksList() {
 }
 
 function getMergeFields() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'Full name', value: 'full_name' },
       { title: 'First name', value: 'first_name' },

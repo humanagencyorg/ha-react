@@ -37,6 +37,7 @@ export const StyledChatbotPhoneInput = styled.input.attrs((props) => ({
     color: #FFF;
     flex: 1;
     border-radius: ${props => props.actionButton ? '8px 0 0 8px' : '8px'};
+    line-height: 2;
 
     &:disabled {
       opacity: 1;
@@ -45,6 +46,7 @@ export const StyledChatbotPhoneInput = styled.input.attrs((props) => ({
     &:focus {
       border-width: 0px;
       box-shadow: none;
+      outline: 0;
     }
 
     &:hover {
