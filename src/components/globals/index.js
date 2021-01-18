@@ -129,7 +129,5 @@ export const ErrorMessageFloat = styled.span`
   z-index: 5;
 `;
 
-export const SubmitButton = styled.input``;
-
 export const baseFontFamily =
   'system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif';

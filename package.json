@@ -62,6 +62,9 @@
     "roots": [
       "./src"
     ],
-    "testRegex": "src/.*.test.js$"
+    "testRegex": "src/.*.test.js$",
+    "moduleNameMapper": {
+      "\\.(svg|png|jpg)$": "<rootDir>/src/mocks/file_mock.js"
+    }
   }
 }

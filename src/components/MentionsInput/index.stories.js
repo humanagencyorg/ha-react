@@ -4,13 +4,6 @@ import { MentionsInput } from './index';
 export default {
   title: 'MentionsInput',
   component: MentionsInput,
-  decorators: [
-    (Story) => (
-      <div style={{ width: '536px', margin: '0 auto', paddingTop: '1em' }}>
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 const Template = (args) => <MentionsInput {...args} />;
