@@ -83,7 +83,7 @@ export const OptionsList = ({
       <List className={classes.root} ref={listRef}>
         <ListSubheader className={classes.subheader}>{header}</ListSubheader>
         {isLoaded ? (
-          <>
+          <React.Fragment>
             {_isEmpty(preparedList) ? (
               <InnerWrapper>
                 <Search />
@@ -92,7 +92,7 @@ export const OptionsList = ({
                 </EmptyResultsText>
               </InnerWrapper>
             ) : (
-              <>
+              <React.Fragment>
                 {preparedList.map((item, index) => {
                   const itemIsSelected = currentItemIndex === index;
                   return (
@@ -114,9 +114,9 @@ export const OptionsList = ({
                     </ListItem>
                   );
                 })}
-              </>
+              </React.Fragment>
             )}
-          </>
+          </React.Fragment>
         ) : (
           <ListItem className={(classes.listItem, classes.centered)}>
             <CircularProgress className={classes.loader} />

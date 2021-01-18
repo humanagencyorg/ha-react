@@ -163,7 +163,7 @@ export const MentionsInput = ({
   };
 
   return (
-    <>
+    <React.Fragment>
       {textarea ? <Textarea {...inputProps} /> : renderReadonlyInput()}
       {dropdownIsOpen && (
         <OptionsList
@@ -176,7 +176,7 @@ export const MentionsInput = ({
           experienceId={experienceId}
         />
       )}
-    </>
+    </React.Fragment>
   );
 };
 
