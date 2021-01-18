@@ -18,12 +18,11 @@ import {
 export const Input = (props) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
-      {props.isLoading && (<Loader {...props} />)}
+      {props.isLoading && <Loader {...props} />}
       <StyledInput {...props} />
-      { props.error ?
-        <StyledErrorMessage>{props.error}</StyledErrorMessage> :
-        null
-      }
+      {props.error ? (
+        <StyledErrorMessage>{props.error}</StyledErrorMessage>
+      ) : null}
     </InputWrapper>
   );
 };
@@ -31,13 +30,12 @@ export const Input = (props) => {
 export const ChatbotPhoneInput = (props) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
-      {props.isLoading && (<Loader {...props} />)}
+      {props.isLoading && <Loader {...props} />}
       <StyledChatbotPhoneInput {...props} />
       {props.actionButton}
-      { props.error ?
-        <StyledErrorMessage>{props.error}</StyledErrorMessage> :
-        null
-      }
+      {props.error ? (
+        <StyledErrorMessage>{props.error}</StyledErrorMessage>
+      ) : null}
     </InputWrapper>
   );
 };
@@ -45,14 +43,11 @@ export const ChatbotPhoneInput = (props) => {
 export const InputWithIcon = (props) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
-      <InputPrefix>
-        {props.icon}
-      </InputPrefix>
+      <InputPrefix>{props.icon}</InputPrefix>
       <StyledInputNoLeftRadius {...props} />
-      { props.error ?
-        <StyledErrorMessage>{props.error}</StyledErrorMessage> :
-        null
-      }
+      {props.error ? (
+        <StyledErrorMessage>{props.error}</StyledErrorMessage>
+      ) : null}
     </InputWrapper>
   );
 };
@@ -64,29 +59,21 @@ export const DraggableInput = (props) => {
         <Icon src={dragIcon} />
       </InputPrefixInline>
       <StyledDraggableInput {...props} />
-      { props.error ?
-        <StyledErrorMessage>{props.error}</StyledErrorMessage> :
-        null
-      }
+      {props.error ? (
+        <StyledErrorMessage>{props.error}</StyledErrorMessage>
+      ) : null}
     </InputWrapper>
   );
 };
 
 export const ColorInput = (props) => {
   return (
-    <>
-      <InputWrapper noMargin={props.noMargin}>
-        <ColorBox color={props.color} />
-        <StyledInput
-          maxLength={7}
-          style={{paddingLeft: '3rem'}}
-          {...props}
-        />
-        { props.error ?
-          <StyledErrorMessage>{props.error}</StyledErrorMessage> :
-          null
-        }
-      </InputWrapper>
-    </>
+    <InputWrapper noMargin={props.noMargin}>
+      <ColorBox color={props.color} />
+      <StyledInput maxLength={7} style={{ paddingLeft: '3rem' }} {...props} />
+      {props.error ? (
+        <StyledErrorMessage>{props.error}</StyledErrorMessage>
+      ) : null}
+    </InputWrapper>
   );
 };
