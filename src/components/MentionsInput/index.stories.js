@@ -51,7 +51,7 @@ ReadonlySelector.args = {
 };
 
 function getExperiencesList() {
-  return new Promise(function (resolve) {
+  return new Promise(function(resolve) {
     resolve([
       { title: 'First Experience', value: '1', subTitle: 'This Experience' },
       { title: 'Second Experience', value: '2' },
