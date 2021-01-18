@@ -68,7 +68,7 @@ function getExperiencesList() {
 }
 
 function getBlocksList() {
-  return new Promise(function (resolve) {
+  return new Promise(function(resolve) {
     resolve([
       { title: 'Wonderwall', value: '1', subTitle: 'Multiple Choice' },
       {
@@ -91,7 +91,7 @@ function getBlocksList() {
 }
 
 function getMergeFields() {
-  return new Promise(function (resolve) {
+  return new Promise(function(resolve) {
     resolve([
       { title: 'Full name', value: 'full_name' },
       { title: 'First name', value: 'first_name' },
