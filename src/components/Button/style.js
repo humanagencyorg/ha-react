@@ -4,16 +4,22 @@ import { darken, lighten } from 'polished';
 export const StyledButton = styled.button.attrs((props) => ({
   type: props.type || 'button',
 }))`
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2;
+  color: #727278;
+  padding: 0.5rem;
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : '#F2F2F2'};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: #727278;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  transition: background-color 150ms ease;
   border: 1px solid transparent;
+  border-radius: 0.5rem;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition: background-color 150ms ease;
 
   &:hover {
     color: #727278;
@@ -121,17 +127,25 @@ export const StyledNewItemButton = styled(StyledButton)`
 export const StyledSmallDeleteButton = styled.button.attrs(() => ({
   type: 'button',
 }))`
+  display: flex;
+  justify-content: center;
+  color: #fff;
   background-color: #ff432e;
   width: 25px;
   height: 25px;
-  justify-content: center;
-  display: flex;
+  padding: 0.5rem;
   border: 2px solid #fff;
   border-radius: 50%;
   line-height: 5px;
+  cursor: pointer;
+  transition: background-color 150ms ease;
 
   &:hover {
     background-color: ${darken(0.15, '#ff432e')};
+  }
+
+  &:focus {
+    outline: 0;
   }
 `;
 

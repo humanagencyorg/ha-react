@@ -1,7 +1,7 @@
 import './style.css';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
     default: 'black',
     values: [
@@ -23,4 +23,12 @@ export const parameters = {
       },
     ],
   },
-}
+};
+
+export const decorators = [
+  (Story) => (
+    <div style={{ maxWidth: '536px', margin: '0 auto', paddingTop: '1em' }}>
+      <Story />
+    </div>
+  ),
+];

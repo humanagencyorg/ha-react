@@ -1,0 +1,59 @@
+import React from 'react';
+import {
+  Button,
+  PrimaryButton,
+  SubmissionButton,
+  NewItemButton,
+  SmallDeleteButton,
+  PrimaryLinkButton,
+  ChatbotLoadingButton,
+} from './index';
+
+export default {
+  title: 'Button',
+  component: Button,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
+
+const PrimaryTemplate = (args) => <PrimaryButton {...args} />;
+const SubmissionTemplate = (args) => <SubmissionButton {...args} />;
+const NewItemTemplate = (args) => <NewItemButton {...args} />;
+const SmallDeleteTemplate = (args) => <SmallDeleteButton {...args} />;
+const PrimaryLinkTemplate = (args) => <PrimaryLinkButton {...args} />;
+const ChatbotLoadingTemplate = (args) => <ChatbotLoadingButton {...args} />;
+
+export const Primary = PrimaryTemplate.bind({});
+Primary.args = {
+  children: 'Save Changes',
+  responsive: true,
+};
+
+export const Submission = SubmissionTemplate.bind({});
+Submission.args = {
+  children: 'Save Changes',
+};
+
+export const NewItem = NewItemTemplate.bind({});
+NewItem.args = {
+  children: '+ Add Item',
+  noMargin: true,
+};
+
+export const SmallDelete = SmallDeleteTemplate.bind({});
+SmallDelete.args = {
+  children: '-',
+};
+
+export const PrimaryLink = PrimaryLinkTemplate.bind({});
+PrimaryLink.args = {
+  children: 'Try the bot',
+};
+
+export const ChatbotLoading = ChatbotLoadingTemplate.bind({});
+ChatbotLoading.args = {
+  children: 'Creating your bot...',
+  isLoading: true,
+  disabled: true,
+};

@@ -72,7 +72,7 @@ export const DraggableInput = (props) => {
   );
 };
 
-export function ColorInput(props) {
+export const ColorInput = (props) => {
   return (
     <>
       <InputWrapper noMargin={props.noMargin}>
