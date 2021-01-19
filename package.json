@@ -12,8 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --format modern,cjs",
-    "start": "microbundle-crl watch --format modern,cjs",
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "lint": "eslint src",
     "prepare": "run-s build",
     "test": "jest",
