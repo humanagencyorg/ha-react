@@ -12,6 +12,7 @@ const StyledLoader = styled.div`
   top: 50%;
   transform: translate(0, -50%);
 `;
+
 function Loader({ loaderWrapper, loader }) {
   return (
     <StyledLoader {...loaderWrapper}>

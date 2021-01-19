@@ -67,7 +67,7 @@
     ],
     "testRegex": "src/.*.test.js$",
     "moduleNameMapper": {
-      "\\.(svg|png|jpg)$": "<rootDir>/src/mocks/file_mock.js"
+      "\\.(svg|png|jpg)$": "<rootDir>/src/__mocks__/file_mock.js"
     }
   }
 }

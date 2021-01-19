@@ -13,14 +13,14 @@ import {
 
 const activeInputField = (props) => {
   return (
-    <React.Fragment>
+    <>
       <Prefix>{props.icon}</Prefix>
       <InputField {...props} />
       {props.error ? (
         <StyledErrorMessage>{props.error}</StyledErrorMessage>
       ) : null}
       <Postfix>{props.postfixIcon}</Postfix>
-    </React.Fragment>
+    </>
   );
 };
 
