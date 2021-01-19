@@ -2,5 +2,8 @@
   "presets": [
     ["@babel/preset-env", { "targets": "defaults" }],
     "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", { "pragmaFrag": "React.Fragment" }]
   ]
 }

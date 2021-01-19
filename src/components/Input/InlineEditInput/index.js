@@ -13,24 +13,24 @@ import {
 
 const activeInputField = (props) => {
   return (
-    <React.Fragment>
+    <>
       <Prefix>{props.icon}</Prefix>
       <InputField {...props} />
       {props.error ? (
         <StyledErrorMessage>{props.error}</StyledErrorMessage>
       ) : null}
       <Postfix>{props.postfixIcon}</Postfix>
-    </React.Fragment>
+    </>
   );
 };
 
 const disabledInputField = (props) => {
   return (
-    <React.Fragment>
+    <>
       <DisabledPrefix>{props.icon}</DisabledPrefix>
       <InlineEditInputPrompt {...props}>{props.placeholder}</InlineEditInputPrompt>
       <DisabledPostfix>{props.postfixIcon}</DisabledPostfix>
-    </React.Fragment>
+    </>
   );
 };
 
