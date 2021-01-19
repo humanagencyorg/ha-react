@@ -6,14 +6,14 @@
   "license": "MIT",
   "repository": "valdemarua/ha-react",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
+  "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format es,cjs --jsx React.createElement",
-    "start": "microbundle-crl watch --no-compress --format es,cjs --jsx React.createElement",
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "lint": "eslint src",
     "prepare": "run-s build",
     "test": "jest",
@@ -67,7 +67,7 @@
     ],
     "testRegex": "src/.*.test.js$",
     "moduleNameMapper": {
-      "\\.(svg|png|jpg)$": "<rootDir>/src/mocks/file_mock.js"
+      "\\.(svg|png|jpg)$": "<rootDir>/src/__mocks__/file_mock.js"
     }
   }
 }
