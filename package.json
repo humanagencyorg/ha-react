@@ -49,9 +49,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.12.0"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@material-ui/core": "^4.9.12",
     "react-feather": "^2.0.8",
@@ -59,15 +57,12 @@
     "styled-components": "^4.4.1"
   },
   "jest": {
-    "setupFilesAfterEnv": [
-      "./src/setupTests.js"
-    ],
-    "roots": [
-      "./src"
-    ],
+    "setupFilesAfterEnv": ["./src/setupTests.js"],
+    "roots": ["./src"],
     "testRegex": "src/.*.test.js$",
     "moduleNameMapper": {
       "\\.(svg|png|jpg)$": "<rootDir>/src/__mocks__/file_mock.js"
     }
-  }
+  },
+  "browserslist": ["defaults"]
 }
