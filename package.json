@@ -13,8 +13,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress",
-    "start": "microbundle-crl watch --no-compress",
+    "build": "microbundle",
+    "start": "microbundle watch",
     "lint": "eslint src",
     "prepare": "run-s build",
     "test": "jest",
@@ -37,6 +37,7 @@
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.2.2",
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "chromatic": "^5.6.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.5",
@@ -45,7 +46,7 @@
     "jest": "^24.9.0",
     "jest-fetch-mock": "^3.0.3",
     "jest-styled-components": "^6.3.4",
-    "microbundle-crl": "^0.13.10",
+    "microbundle": "^0.13.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.11.0",
