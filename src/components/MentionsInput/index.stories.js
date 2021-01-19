@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = (args) => <MentionsInput {...args} />;
-const steps = [
+const threeSteps = [
   {
     type: 'experiences',
     title: 'Experiences',
@@ -27,10 +27,18 @@ const steps = [
     loadList: getMergeFields,
   },
 ];
+const oneStep = [
+  {
+    type: 'experiences',
+    title: 'Experiences',
+    referencePrefix: 'experience_',
+    loadList: getExperiencesList,
+  },
+];
 
 export const Textarea = Template.bind({});
 Textarea.args = {
-  steps,
+  steps: threeSteps,
   name: 'Name',
   defaultValue: '',
   placeholder: 'e.g. Where should we eat dinner tonight?',
@@ -41,13 +49,19 @@ Textarea.args = {
 
 export const ReadonlySelector = Template.bind({});
 ReadonlySelector.args = {
-  steps,
+  steps: threeSteps,
   name: 'Name',
   defaultValue: '',
   placeholder: 'Search for experiences',
   experienceId: 1,
   textarea: false,
   readOnly: true,
+};
+
+export const WithOneStep = Template.bind({});
+WithOneStep.args = {
+  ...Textarea.args,
+  steps: oneStep,
 };
 
 function getExperiencesList() {
