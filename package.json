@@ -6,14 +6,14 @@
   "license": "MIT",
   "repository": "valdemarua/ha-react",
   "main": "dist/index.js",
-  "module": "dist/index.modern.js",
+  "module": "dist/index.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress --format cjs",
+    "start": "microbundle-crl watch --no-compress --format cjs",
     "lint": "eslint src",
     "prepare": "run-s build",
     "test": "jest",
