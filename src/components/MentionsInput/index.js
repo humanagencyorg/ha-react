@@ -47,6 +47,7 @@ export const MentionsInput = ({
 
   const onClick = () => {
     setDropdownIsOpen(true);
+    setCurrentItemIndex(0);
   };
 
   useEffect(() => {
@@ -65,8 +66,9 @@ export const MentionsInput = ({
         case 'Enter':
           e.preventDefault();
           setCurrentItemIndex(0);
-          if (currentItemRef.current) {
+          if (currentItemRef.current && listRef.current) {
             currentItemRef.current.click();
+            listRef.current.children[1].scrollIntoView(false);
           }
           break;
         case 'ArrowUp':
