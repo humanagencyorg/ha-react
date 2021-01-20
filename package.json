@@ -4,7 +4,7 @@
   "description": "Human Agency React components library",
   "author": "valdemarua",
   "license": "MIT",
-  "repository": "valdemarua/ha-react",
+  "repository": "humanagencyorg/ha-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
