@@ -1,7 +1,6 @@
 import React from 'react';
 import Loader from '../Loader';
-import dragIcon from '../../assets/icons/icon--drag.svg';
-import Icon from '../Icon';
+import DragIcon from '../../assets/icons/icon--drag.svg';
 
 import {
   InputWrapper,
@@ -56,7 +55,7 @@ export const DraggableInput = (props) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
       <InputPrefixInline>
-        <Icon src={dragIcon} />
+        <DragIcon />
       </InputPrefixInline>
       <StyledDraggableInput {...props} />
       {props.error ? (
