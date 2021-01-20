@@ -4,7 +4,6 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    "inline-react-svg",
     ["@babel/plugin-transform-react-jsx", { "pragmaFrag": "React.Fragment" }]
   ]
 }
