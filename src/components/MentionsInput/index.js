@@ -12,6 +12,7 @@ export const MentionsInput = ({
   steps,
   readOnly,
   experienceId,
+  error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
@@ -131,6 +132,7 @@ export const MentionsInput = ({
   const inputProps = {
     name,
     placeholder,
+    error,
     value: inputValue,
     onChange: handleInputChange,
     onKeyDown: handleKeyDown,
@@ -139,7 +141,6 @@ export const MentionsInput = ({
 
   if (readOnly) {
     inputProps.onClick = onClick;
-    inputProps.placeholder = 'Search free response blocks';
     inputProps.readOnly = true;
     inputProps.autocomplete = 'off';
     inputProps.style = { cursor: 'pointer' };
@@ -186,6 +187,7 @@ MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
+  error: PropTypes.string,
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string,

@@ -58,6 +58,12 @@ ReadonlySelector.args = {
   readOnly: true,
 };
 
+export const ReadonlySelectorWithError = Template.bind({});
+ReadonlySelectorWithError.args = {
+  ...ReadonlySelector.args,
+  error: 'can\'t be blank',
+};
+
 export const WithOneStep = Template.bind({});
 WithOneStep.args = {
   ...Textarea.args,
