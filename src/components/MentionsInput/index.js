@@ -9,7 +9,7 @@ export const MentionsInput = ({
   defaultValue,
   placeholder,
   textarea,
-  onCompletedReference,
+  onValueChange,
   steps,
   readOnly,
   experienceId,
@@ -117,8 +117,8 @@ export const MentionsInput = ({
     if (readOnly) {
       const value = reference.trim();
 
-      if (onCompletedReference) {
-        onCompletedReference(value);
+      if (onValueChange) {
+        onValueChange(value);
       }
 
       setInputValue(value);
@@ -135,6 +135,14 @@ export const MentionsInput = ({
     if (inputRef.current) {
       inputRef.current.focus();
     }
+  };
+
+  const handleClearInput = () => {
+    if (onValueChange) {
+      onValueChange('');
+    }
+
+    setInputValue('');
   };
 
   const inputProps = {
@@ -163,7 +171,7 @@ export const MentionsInput = ({
         {inputValue ? (
           <ClearIcon
             size={20}
-            onClick={() => setInputValue('')}
+            onClick={handleClearInput}
             data-testid="MentionsInput/ClearIcon"
           />
         ) : (
@@ -195,7 +203,7 @@ MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
-  onCompletedReference: PropTypes.func,
+  onValueChange: PropTypes.func,
   error: PropTypes.string,
   steps: PropTypes.arrayOf(
     PropTypes.shape({

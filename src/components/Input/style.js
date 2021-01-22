@@ -84,10 +84,10 @@ export const StyledErrorMessage = styled.span`
   text-align: center;
   background-color: #E74C0A;
   font-size: 12px;
-  padding: 6px 12px;
+  padding: 3px 9px;
   position: absolute;
   right: 5px;
-  top: -5px;
+  top: -13px;
 `;
 
 export const InputPrefix = styled.span`
