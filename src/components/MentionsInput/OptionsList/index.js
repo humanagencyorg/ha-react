@@ -14,7 +14,7 @@ import { Search } from 'react-feather';
 export const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: ({ inputWidth }) => inputWidth,
+    maxWidth: ({ inputWidth }) => inputWidth - 19,
     backgroundColor: theme.palette.background.paper,
     position: 'relative',
     overflow: 'auto',
