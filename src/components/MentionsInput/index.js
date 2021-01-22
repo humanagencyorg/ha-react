@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
-import { Input } from '../Input';
 import { OptionsList } from './OptionsList';
+import { Input } from '../Input';
 
 export const MentionsInput = ({
   name,
@@ -110,7 +110,9 @@ export const MentionsInput = ({
   const handleLastSelect = (items) => {
     const referenceKeys = items.map((item, index) => {
       const currentStep = steps[index];
-      return currentStep.skipFieldRender ? '' : `${currentStep.referencePrefix}${item}`;
+      return currentStep.skipFieldRender
+        ? ''
+        : `${currentStep.referencePrefix}${item}`;
     });
     const reference = `{{${referenceKeys.join('.').replace(/^\./g, '')}}} `;
 
@@ -149,6 +151,7 @@ export const MentionsInput = ({
     name,
     placeholder,
     error,
+    noMargin: true,
     value: inputValue,
     onChange: handleInputChange,
     onKeyDown: handleKeyDown,
@@ -160,8 +163,6 @@ export const MentionsInput = ({
     inputProps.readOnly = true;
     inputProps.autocomplete = 'off';
     inputProps.style = { cursor: 'pointer' };
-    inputProps.ref = null;
-    inputProps.noMargin = true;
   }
 
   const renderReadonlyInput = () => {
@@ -189,6 +190,7 @@ export const MentionsInput = ({
           steps={steps}
           handleLastSelect={handleLastSelect}
           currentItemIndex={currentItemIndex}
+          inputWidth={inputRef.current ? inputRef.current.clientWidth : 517}
           listRef={listRef}
           currentItemRef={currentItemRef}
           setCurrentItemIndex={setCurrentItemIndex}

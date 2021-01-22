@@ -14,17 +14,17 @@ import {
   ColorBox,
 } from './style';
 
-export const Input = (props) => {
+export const Input = React.forwardRef((props, ref) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
       {props.isLoading && <Loader {...props} />}
-      <StyledInput {...props} />
+      <StyledInput {...props} ref={ref} />
       {props.error ? (
         <StyledErrorMessage>{props.error}</StyledErrorMessage>
       ) : null}
     </InputWrapper>
   );
-};
+});
 
 export const ChatbotPhoneInput = (props) => {
   return (

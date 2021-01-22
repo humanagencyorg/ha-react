@@ -29,6 +29,7 @@ describe('OptionsList component', () => {
           currentItemIndex={0}
           listRef={fn}
           currentItemRef={fn}
+          inputWidth={415}
         />,
       );
     });
@@ -66,6 +67,7 @@ describe('OptionsList component', () => {
           currentItemIndex={0}
           listRef={fn}
           currentItemRef={fn}
+          inputWidth={415}
         />,
       );
     });
