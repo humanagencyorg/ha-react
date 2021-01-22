@@ -9,6 +9,7 @@ export const MentionsInput = ({
   defaultValue,
   placeholder,
   textarea,
+  onCompletedReference,
   steps,
   readOnly,
   experienceId,
@@ -108,12 +109,19 @@ export const MentionsInput = ({
 
   const handleLastSelect = (items) => {
     const referenceKeys = items.map((item, index) => {
-      return `${steps[index].referencePrefix}${item}`;
+      const currentStep = steps[index];
+      return currentStep.skipFieldRender ? '' : `${currentStep.referencePrefix}${item}`;
     });
-    const reference = `{{${referenceKeys.join('.')}}} `;
+    const reference = `{{${referenceKeys.join('.').replace(/^\./g, '')}}} `;
 
     if (readOnly) {
-      setInputValue(reference.trim());
+      const value = reference.trim();
+
+      if (onCompletedReference) {
+        onCompletedReference(value);
+      }
+
+      setInputValue(value);
     } else {
       setInputValue(
         inputValue.slice(0, mentionSymbolPosition) +
@@ -187,6 +195,7 @@ MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
+  onCompletedReference: PropTypes.func,
   error: PropTypes.string,
   steps: PropTypes.arrayOf(
     PropTypes.shape({
