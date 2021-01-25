@@ -111,11 +111,11 @@ export const MentionsInput = ({
     const referenceKeys = items
       .map((item, index) => {
         const currentStep = steps[index];
-        return currentStep.skipFieldRender
-          ? ''
-          : `${currentStep.referencePrefix}${item}`;
+        return currentStep.skipFieldRender ?
+          '' :
+          `${currentStep.referencePrefix}${item}`;
       })
-      .filter((item) => item.length);
+      .filter((item) => item.length > 0);
     const reference = `{{${referenceKeys.join('.')}}} `;
 
     if (readOnly) {
