@@ -1,17 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
-import { Input } from '../Input';
 import { OptionsList } from './OptionsList';
+import { Input } from '../Input';
 
 export const MentionsInput = ({
   name,
   defaultValue,
   placeholder,
   textarea,
+  onValueChange,
   steps,
   readOnly,
   experienceId,
+  error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
@@ -106,13 +108,24 @@ export const MentionsInput = ({
   };
 
   const handleLastSelect = (items) => {
-    const referenceKeys = items.map((item, index) => {
-      return `${steps[index].referencePrefix}${item}`;
-    });
+    const referenceKeys = items
+      .map((item, index) => {
+        const currentStep = steps[index];
+        return currentStep.skipFieldRender ?
+          '' :
+          `${currentStep.referencePrefix}${item}`;
+      })
+      .filter((item) => item.length > 0);
     const reference = `{{${referenceKeys.join('.')}}} `;
 
     if (readOnly) {
-      setInputValue(reference.trim());
+      const value = reference.trim();
+
+      if (onValueChange) {
+        onValueChange(value);
+      }
+
+      setInputValue(value);
     } else {
       setInputValue(
         inputValue.slice(0, mentionSymbolPosition) +
@@ -128,9 +141,19 @@ export const MentionsInput = ({
     }
   };
 
+  const handleClearInput = () => {
+    if (onValueChange) {
+      onValueChange('');
+    }
+
+    setInputValue('');
+  };
+
   const inputProps = {
     name,
     placeholder,
+    error,
+    noMargin: true,
     value: inputValue,
     onChange: handleInputChange,
     onKeyDown: handleKeyDown,
@@ -139,12 +162,9 @@ export const MentionsInput = ({
 
   if (readOnly) {
     inputProps.onClick = onClick;
-    inputProps.placeholder = 'Search free response blocks';
     inputProps.readOnly = true;
     inputProps.autocomplete = 'off';
     inputProps.style = { cursor: 'pointer' };
-    inputProps.ref = null;
-    inputProps.noMargin = true;
   }
 
   const renderReadonlyInput = () => {
@@ -154,7 +174,7 @@ export const MentionsInput = ({
         {inputValue ? (
           <ClearIcon
             size={20}
-            onClick={() => setInputValue('')}
+            onClick={handleClearInput}
             data-testid="MentionsInput/ClearIcon"
           />
         ) : (
@@ -172,6 +192,7 @@ export const MentionsInput = ({
           steps={steps}
           handleLastSelect={handleLastSelect}
           currentItemIndex={currentItemIndex}
+          inputWidth={inputRef.current ? inputRef.current.clientWidth : 517}
           listRef={listRef}
           currentItemRef={currentItemRef}
           setCurrentItemIndex={setCurrentItemIndex}
@@ -186,6 +207,8 @@ MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
+  onValueChange: PropTypes.func,
+  error: PropTypes.string,
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string,

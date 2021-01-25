@@ -14,7 +14,7 @@ import { Search } from 'react-feather';
 export const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: 517,
+    maxWidth: ({ inputWidth }) => inputWidth - 19,
     backgroundColor: theme.palette.background.paper,
     position: 'relative',
     overflow: 'auto',
@@ -58,16 +58,17 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const OptionsList = ({
-  steps,
-  handleLastSelect,
-  currentItemIndex,
-  listRef,
-  currentItemRef,
-  setCurrentItemIndex,
-  experienceId,
-}) => {
-  const classes = useStyles();
+export const OptionsList = (props) => {
+  const {
+    steps,
+    handleLastSelect,
+    currentItemIndex,
+    listRef,
+    currentItemRef,
+    setCurrentItemIndex,
+    experienceId,
+  } = props;
+  const classes = useStyles(props);
   const { preparedList, onSelect, header, isLoaded } = usePreparedList(
     handleLastSelect,
     steps,
@@ -139,6 +140,7 @@ OptionsList.propTypes = {
   experienceId: PropTypes.number,
   handleLastSelect: PropTypes.func.isRequired,
   setCurrentItemIndex: PropTypes.func.isRequired,
+  inputWidth: PropTypes.number.isRequired,
   currentItemIndex: PropTypes.number.isRequired,
   listRef: PropTypes.oneOfType([
     PropTypes.func,

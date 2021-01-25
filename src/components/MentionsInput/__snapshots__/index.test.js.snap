@@ -63,6 +63,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
 >
   <Styled(styled.textarea)
     name="Name"
+    noMargin={true}
     onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="placeholder"
@@ -177,6 +178,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
         }
       }
       name="Name"
+      noMargin={true}
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder="placeholder"
@@ -271,14 +273,14 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
       }
     }
   >
-    <Input
+    <ForwardRef
       autocomplete="off"
       name="Name"
       noMargin={true}
       onChange={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
-      placeholder="Search free response blocks"
+      placeholder="placeholder"
       readOnly={true}
       style={
         Object {
@@ -296,7 +298,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-ckVGcZ",
+                "componentId": "sc-hMqMXs",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -314,7 +316,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-ckVGcZ",
+              "styledComponentId": "sc-hMqMXs",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -334,7 +336,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
               onChange={[Function]}
               onClick={[Function]}
               onKeyDown={[Function]}
-              placeholder="Search free response blocks"
+              placeholder="placeholder"
               readOnly={true}
               style={
                 Object {
@@ -352,7 +354,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
                       [Function],
                     ],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kgoBCf",
+                      "componentId": "sc-dxgOiQ",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -382,20 +384,52 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
                     "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kgoBCf",
+                    "styledComponentId": "sc-dxgOiQ",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
                 }
-                forwardedRef={null}
+                forwardedRef={
+                  Object {
+                    "current": .c0 {
+  background-color: #fff;
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 2;
+}
+
+.c0:focus {
+  border-width: 0px;
+  background-color: #fff;
+  box-shadow: none;
+  outline: 0;
+}
+
+<input
+                      class="c0"
+                      name="Name"
+                      placeholder="placeholder"
+                      readonly=""
+                      style="cursor: pointer;"
+                      type="text"
+                      value="title"
+                    />,
+                  }
+                }
                 name="Name"
                 noMargin={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                placeholder="Search free response blocks"
+                placeholder="placeholder"
                 readOnly={true}
                 style={
                   Object {
@@ -410,7 +444,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  placeholder="Search free response blocks"
+                  placeholder="placeholder"
                   readOnly={true}
                   style={
                     Object {
@@ -425,7 +459,7 @@ exports[`MentionsInput component when textarea prop is true when textarea prop i
           </div>
         </StyledComponent>
       </styled.div>
-    </Input>
+    </ForwardRef>
     <Styled(X)
       data-testid="MentionsInput/ClearIcon"
       onClick={[Function]}

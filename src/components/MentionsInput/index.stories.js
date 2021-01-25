@@ -27,6 +27,21 @@ const threeSteps = [
     loadList: getMergeFields,
   },
 ];
+const stepsWithSkiipedField = [
+  {
+    type: 'experiences',
+    title: 'Experiences',
+    referencePrefix: 'experience_',
+    loadList: getExperiencesList,
+    skipFieldRender: true,
+  },
+  {
+    type: 'experiences',
+    title: 'Experiences',
+    referencePrefix: 'block_url_',
+    loadList: getBlocksList,
+  },
+];
 const oneStep = [
   {
     type: 'experiences',
@@ -56,6 +71,18 @@ ReadonlySelector.args = {
   experienceId: 1,
   textarea: false,
   readOnly: true,
+};
+
+export const ReadonlyWithSkippedField = Template.bind({});
+ReadonlyWithSkippedField.args = {
+  ...ReadonlySelector.args,
+  steps: stepsWithSkiipedField,
+};
+
+export const ReadonlySelectorWithError = Template.bind({});
+ReadonlySelectorWithError.args = {
+  ...ReadonlySelector.args,
+  error: 'can\'t be blank',
 };
 
 export const WithOneStep = Template.bind({});

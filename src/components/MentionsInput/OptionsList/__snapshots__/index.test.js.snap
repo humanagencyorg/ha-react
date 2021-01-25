@@ -14,6 +14,7 @@ exports[`OptionsList component renders first step 1`] = `
   currentItemRef={[Function]}
   experienceId={1}
   handleLastSelect={[Function]}
+  inputWidth={415}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
   steps={
@@ -67,10 +68,10 @@ exports[`OptionsList component renders first step 1`] = `
         data-testid="MentionsInput/OptionsList"
       >
         <WithStyles(ForwardRef(List))
-          className="makeStyles-root-1"
+          className="makeStyles-root-1 makeStyles-root-7"
         >
           <ForwardRef(List)
-            className="makeStyles-root-1"
+            className="makeStyles-root-1 makeStyles-root-7"
             classes={
               Object {
                 "dense": "MuiList-dense",
@@ -81,7 +82,7 @@ exports[`OptionsList component renders first step 1`] = `
             }
           >
             <ul
-              className="MuiList-root makeStyles-root-1 MuiList-padding"
+              className="MuiList-root makeStyles-root-1 makeStyles-root-7 MuiList-padding"
             >
               <WithStyles(ForwardRef(ListSubheader))
                 className="makeStyles-subheader-2"
@@ -453,6 +454,7 @@ exports[`OptionsList component renders loader 1`] = `
   currentItemRef={[Function]}
   experienceId={1}
   handleLastSelect={[Function]}
+  inputWidth={415}
   listRef={[Function]}
   setCurrentItemIndex={[Function]}
   steps={
@@ -506,10 +508,10 @@ exports[`OptionsList component renders loader 1`] = `
         data-testid="MentionsInput/OptionsList"
       >
         <WithStyles(ForwardRef(List))
-          className="makeStyles-root-1"
+          className="makeStyles-root-1 makeStyles-root-6"
         >
           <ForwardRef(List)
-            className="makeStyles-root-1"
+            className="makeStyles-root-1 makeStyles-root-6"
             classes={
               Object {
                 "dense": "MuiList-dense",
@@ -520,7 +522,7 @@ exports[`OptionsList component renders loader 1`] = `
             }
           >
             <ul
-              className="MuiList-root makeStyles-root-1 MuiList-padding"
+              className="MuiList-root makeStyles-root-1 makeStyles-root-6 MuiList-padding"
             >
               <WithStyles(ForwardRef(ListSubheader))
                 className="makeStyles-subheader-2"
