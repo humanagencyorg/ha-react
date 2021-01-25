@@ -108,13 +108,15 @@ export const MentionsInput = ({
   };
 
   const handleLastSelect = (items) => {
-    const referenceKeys = items.map((item, index) => {
-      const currentStep = steps[index];
-      return currentStep.skipFieldRender
-        ? ''
-        : `${currentStep.referencePrefix}${item}`;
-    });
-    const reference = `{{${referenceKeys.join('.').replace(/^\./g, '')}}} `;
+    const referenceKeys = items
+      .map((item, index) => {
+        const currentStep = steps[index];
+        return currentStep.skipFieldRender
+          ? ''
+          : `${currentStep.referencePrefix}${item}`;
+      })
+      .filter((item) => item.length);
+    const reference = `{{${referenceKeys.join('.')}}} `;
 
     if (readOnly) {
       const value = reference.trim();
