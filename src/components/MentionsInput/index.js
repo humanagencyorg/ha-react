@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
 import { OptionsList } from './OptionsList';
 import { Input } from '../Input';
+import { StyledErrorMessage } from '../Input/style';
 
 export const MentionsInput = ({
   name,
@@ -185,7 +186,12 @@ export const MentionsInput = ({
     <>
       <div style={{ position: 'relative' }}>
         {textarea ? (
-          <Textarea {...inputProps} style={inputProps.inputStyle} />
+          <>
+            <Textarea {...inputProps} style={inputProps.inputStyle} />
+            {error ? (
+              <StyledErrorMessage>{error}</StyledErrorMessage>
+            ) : null}
+          </>
         ) : (
           <Input {...inputProps} />
         )}

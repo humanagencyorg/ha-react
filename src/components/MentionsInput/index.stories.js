@@ -62,6 +62,12 @@ Textarea.args = {
   readOnly: false,
 };
 
+export const TextareaWithError = Template.bind({});
+TextareaWithError.args = {
+  ...Textarea.args,
+  error: 'can\'t be blank',
+};
+
 export const TextareaWithCustomStyles = Template.bind({});
 TextareaWithCustomStyles.args = {
   ...Textarea.args,

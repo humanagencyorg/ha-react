@@ -765,6 +765,433 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
 </MentionsInput>
 `;
 
+exports[`MentionsInput component when textarea prop is false with error matches snapshot 1`] = `
+.c3 {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #333;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.c3:hover {
+  opacity: 1;
+}
+
+.c1 {
+  background-color: #fff;
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 2;
+}
+
+.c1:focus {
+  border-width: 0px;
+  background-color: #fff;
+  box-shadow: none;
+  outline: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+.c2 {
+  border-radius: 5px;
+  text-align: center;
+  background-color: #E74C0A;
+  font-size: 12px;
+  padding: 3px 9px;
+  position: absolute;
+  right: 5px;
+  top: -13px;
+}
+
+<MentionsInput
+  defaultValue="title"
+  error="error"
+  experienceId={1}
+  name="Name"
+  placeholder="placeholder"
+  readOnly={true}
+  steps={
+    Array [
+      Object {
+        "loadList": [Function],
+        "referencePrefix": "",
+        "title": "",
+        "type": "",
+      },
+    ]
+  }
+  textarea={false}
+>
+  <div
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <ForwardRef
+      autocomplete="off"
+      error="error"
+      inputStyle={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      name="Name"
+      noMargin={true}
+      onChange={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="placeholder"
+      readOnly={true}
+      value="title"
+    >
+      <styled.div
+        noMargin={true}
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-hMqMXs",
+                "isStatic": false,
+                "lastClassName": "c0",
+                "rules": Array [
+                  "
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  margin: ",
+                  [Function],
+                  ";
+  width: 100%;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-hMqMXs",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          noMargin={true}
+        >
+          <div
+            className="c0"
+          >
+            <styled.input
+              autocomplete="off"
+              error="error"
+              inputStyle={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              name="Name"
+              noMargin={true}
+              onChange={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              placeholder="placeholder"
+              readOnly={true}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              value="title"
+            >
+              <StyledComponent
+                autocomplete="off"
+                error="error"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [
+                      [Function],
+                    ],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dxgOiQ",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  background-color: ",
+                        [Function],
+                        ";
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 2;
+
+  &:focus {
+    border-width: 0px;
+    background-color: #fff;
+    box-shadow: none;
+    outline: 0;
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.input",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dxgOiQ",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={
+                  Object {
+                    "current": .c0 {
+  background-color: #fff;
+  padding: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border-width: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 2;
+}
+
+.c0:focus {
+  border-width: 0px;
+  background-color: #fff;
+  box-shadow: none;
+  outline: 0;
+}
+
+<input
+                      class="c0"
+                      name="Name"
+                      placeholder="placeholder"
+                      readonly=""
+                      style="cursor: pointer;"
+                      type="text"
+                      value="title"
+                    />,
+                  }
+                }
+                inputStyle={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                name="Name"
+                noMargin={true}
+                onChange={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                placeholder="placeholder"
+                readOnly={true}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                value="title"
+              >
+                <input
+                  className="c1"
+                  name="Name"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="placeholder"
+                  readOnly={true}
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                    }
+                  }
+                  type="text"
+                  value="title"
+                />
+              </StyledComponent>
+            </styled.input>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kEYyzF",
+                      "isStatic": false,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "
+  border-radius: 5px;
+  text-align: center;
+  background-color: #E74C0A;
+  font-size: 12px;
+  padding: 3px 9px;
+  position: absolute;
+  right: 5px;
+  top: -13px;
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kEYyzF",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c2"
+                >
+                  error
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </ForwardRef>
+    <Styled(X)
+      data-testid="MentionsInput/ClearIcon"
+      onClick={[Function]}
+      size={20}
+    >
+      <StyledComponent
+        data-testid="MentionsInput/ClearIcon"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-cSHVUG",
+              "isStatic": false,
+              "lastClassName": "c3",
+              "rules": Array [
+                "
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #333;
+  opacity: 0.6;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+",
+              ],
+            },
+            "displayName": "Styled(X)",
+            "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "color": [Function],
+              "size": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "sc-cSHVUG",
+            "target": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "X",
+              "propTypes": Object {
+                "color": [Function],
+                "size": [Function],
+              },
+              "render": [Function],
+            },
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        onClick={[Function]}
+        size={20}
+      >
+        <X
+          className="c3"
+          data-testid="MentionsInput/ClearIcon"
+          onClick={[Function]}
+          size={20}
+        >
+          <svg
+            className="c3"
+            data-testid="MentionsInput/ClearIcon"
+            fill="none"
+            height={20}
+            onClick={[Function]}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </X>
+      </StyledComponent>
+    </Styled(X)>
+  </div>
+</MentionsInput>
+`;
+
 exports[`MentionsInput component when textarea prop is true matches snaphot 1`] = `
 .c0 {
   display: block;
@@ -1214,6 +1641,267 @@ exports[`MentionsInput component when textarea prop is true with custom styles m
         />
       </StyledComponent>
     </Styled(styled.textarea)>
+  </div>
+</MentionsInput>
+`;
+
+exports[`MentionsInput component when textarea prop is true with error matches snapshot 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.c0:focus {
+  background-color: #fff;
+  outline: 0;
+}
+
+.c0:focus {
+  box-shadow: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::-moz-placeholder {
+  color: #bdbdbd;
+}
+
+.c0:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::placeholder {
+  color: #bdbdbd;
+}
+
+.c1 {
+  border-radius: 5px;
+  text-align: center;
+  background-color: #E74C0A;
+  font-size: 12px;
+  padding: 3px 9px;
+  position: absolute;
+  right: 5px;
+  top: -13px;
+}
+
+<MentionsInput
+  defaultValue="title"
+  error="error"
+  experienceId={1}
+  name="Name"
+  placeholder="placeholder"
+  readOnly={false}
+  steps={
+    Array [
+      Object {
+        "loadList": [Function],
+        "referencePrefix": "",
+        "title": "",
+        "type": "",
+      },
+    ]
+  }
+  textarea={true}
+>
+  <div
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <Styled(styled.textarea)
+      error="error"
+      name="Name"
+      noMargin={true}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="placeholder"
+      value="title"
+    >
+      <StyledComponent
+        error="error"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-jzJRlG",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  resize: vertical;
+
+  &:focus {
+    background-color: #fff;
+    outline: 0;
+  }
+",
+                "
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+",
+              ],
+            },
+            "displayName": "Styled(styled.textarea)",
+            "foldedComponentIds": Array [
+              "sc-bZQynM",
+            ],
+            "render": [Function],
+            "styledComponentId": "sc-jzJRlG",
+            "target": "textarea",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={
+          Object {
+            "current": .c0 {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-width: 0;
+  margin: 0;
+  min-height: 82px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.c0:focus {
+  background-color: #fff;
+  outline: 0;
+}
+
+.c0:focus {
+  box-shadow: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::-moz-placeholder {
+  color: #bdbdbd;
+}
+
+.c0:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.c0::placeholder {
+  color: #bdbdbd;
+}
+
+<textarea
+              class="c0"
+              name="Name"
+              placeholder="placeholder"
+            >
+              title
+            </textarea>,
+          }
+        }
+        name="Name"
+        noMargin={true}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="placeholder"
+        value="title"
+      >
+        <textarea
+          className="c0"
+          name="Name"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="placeholder"
+          value="title"
+        />
+      </StyledComponent>
+    </Styled(styled.textarea)>
+    <styled.span>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-kEYyzF",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "
+  border-radius: 5px;
+  text-align: center;
+  background-color: #E74C0A;
+  font-size: 12px;
+  padding: 3px 9px;
+  position: absolute;
+  right: 5px;
+  top: -13px;
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-kEYyzF",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <span
+          className="c1"
+        >
+          error
+        </span>
+      </StyledComponent>
+    </styled.span>
   </div>
 </MentionsInput>
 `;

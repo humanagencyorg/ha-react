@@ -30,6 +30,33 @@ describe('MentionsInput component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
 
+    describe('with error', () => {
+      it('matches snapshot', () => {
+        const steps = [
+          {
+            type: '',
+            title: '',
+            referencePrefix: '',
+            loadList: () => {},
+          },
+        ];
+        const props = {
+          steps,
+          name: 'Name',
+          defaultValue: 'title',
+          placeholder: 'placeholder',
+          experienceId: 1,
+          textarea: true,
+          readOnly: false,
+          error: 'error',
+        };
+
+        const component = mount(<MentionsInput {...props} />);
+
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+
     describe('with custom styles', () => {
       it('matches snapshot', () => {
         const steps = [
@@ -112,6 +139,33 @@ describe('MentionsInput component', () => {
           textarea: false,
           readOnly: true,
           inputStyle: style,
+        };
+
+        const component = mount(<MentionsInput {...props} />);
+
+        expect(toJson(component)).toMatchSnapshot();
+      });
+    });
+
+    describe('with error', () => {
+      it('matches snapshot', () => {
+        const steps = [
+          {
+            type: '',
+            title: '',
+            referencePrefix: '',
+            loadList: () => {},
+          },
+        ];
+        const props = {
+          steps,
+          name: 'Name',
+          defaultValue: 'title',
+          placeholder: 'placeholder',
+          experienceId: 1,
+          textarea: false,
+          readOnly: true,
+          error: 'error',
         };
 
         const component = mount(<MentionsInput {...props} />);
