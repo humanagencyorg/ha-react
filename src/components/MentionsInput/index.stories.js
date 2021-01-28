@@ -62,6 +62,16 @@ Textarea.args = {
   readOnly: false,
 };
 
+export const TextareaWithCustomStyles = Template.bind({});
+TextareaWithCustomStyles.args = {
+  ...Textarea.args,
+  inputStyle: {
+    borderBottomRightRadius: '8px',
+    borderBottomLeftRadius: '8px',
+    background: '#fff3e2',
+  },
+};
+
 export const ReadonlySelector = Template.bind({});
 ReadonlySelector.args = {
   steps: threeSteps,
@@ -71,6 +81,16 @@ ReadonlySelector.args = {
   experienceId: 1,
   textarea: false,
   readOnly: true,
+};
+
+export const ReadonlyWithCustomStyles = Template.bind({});
+ReadonlyWithCustomStyles.args = {
+  ...ReadonlySelector.args,
+  inputStyle: {
+    borderTopRightRadius: '0px',
+    borderTopLeftRadius: '0px',
+    background: '#fceef5',
+  },
 };
 
 export const ReadonlyWithSkippedField = Template.bind({});

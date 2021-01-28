@@ -22,6 +22,14 @@ const DraggableTemplate = (args) => <DraggableInput {...args} />;
 export const Default = DefaultTemplate.bind({});
 Default.args = {};
 
+export const WithCustomStyles = DefaultTemplate.bind({});
+WithCustomStyles.args = {
+  inputStyle: {
+    borderTopRightRadius: '0px',
+    borderTopLeftRadius: '0px',
+  },
+};
+
 export const WithError = DefaultTemplate.bind({});
 WithError.args = {
   error: "can't be less than 1",

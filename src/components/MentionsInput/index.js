@@ -13,6 +13,7 @@ export const MentionsInput = ({
   steps,
   readOnly,
   experienceId,
+  inputStyle,
   error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
@@ -154,6 +155,7 @@ export const MentionsInput = ({
     placeholder,
     error,
     noMargin: true,
+    inputStyle,
     value: inputValue,
     onChange: handleInputChange,
     onKeyDown: handleKeyDown,
@@ -164,29 +166,31 @@ export const MentionsInput = ({
     inputProps.onClick = onClick;
     inputProps.readOnly = true;
     inputProps.autocomplete = 'off';
-    inputProps.style = { cursor: 'pointer' };
+    inputProps.inputStyle = { ...inputStyle, cursor: 'pointer' };
   }
 
-  const renderReadonlyInput = () => {
-    return (
-      <div style={{ position: 'relative' }}>
-        <Input {...inputProps} />
-        {inputValue ? (
-          <ClearIcon
-            size={20}
-            onClick={handleClearInput}
-            data-testid="MentionsInput/ClearIcon"
-          />
-        ) : (
-          <SearchIcon size={20} onClick={onClick} />
-        )}
-      </div>
+  const renderReadonlyIcon = () => {
+    return inputValue ? (
+      <ClearIcon
+        size={20}
+        onClick={handleClearInput}
+        data-testid="MentionsInput/ClearIcon"
+      />
+    ) : (
+      <SearchIcon size={20} onClick={onClick} />
     );
   };
 
   return (
     <>
-      {textarea ? <Textarea {...inputProps} /> : renderReadonlyInput()}
+      <div style={{ position: 'relative' }}>
+        {textarea ? (
+          <Textarea {...inputProps} style={inputProps.inputStyle} />
+        ) : (
+          <Input {...inputProps} />
+        )}
+        {readOnly && renderReadonlyIcon()}
+      </div>
       {dropdownIsOpen && (
         <OptionsList
           steps={steps}
@@ -218,6 +222,7 @@ MentionsInput.propTypes = {
     }),
   ).isRequired,
   experienceId: PropTypes.number,
+  inputStyle: PropTypes.object,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };
