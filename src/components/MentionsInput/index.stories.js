@@ -99,6 +99,12 @@ ReadonlyWithCustomStyles.args = {
   },
 };
 
+export const ReadonlyInitiallyOpen = Template.bind({});
+ReadonlyInitiallyOpen.args = {
+  ...ReadonlySelector.args,
+  isOpen: true,
+};
+
 export const ReadonlyWithSkippedField = Template.bind({});
 ReadonlyWithSkippedField.args = {
   ...ReadonlySelector.args,

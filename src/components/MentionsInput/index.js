@@ -15,6 +15,7 @@ export const MentionsInput = ({
   readOnly,
   experienceId,
   inputStyle,
+  isOpen,
   error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
@@ -24,6 +25,12 @@ export const MentionsInput = ({
   const inputRef = useRef(null);
   const currentItemRef = useRef(null);
   const listRef = useRef(null);
+
+  useEffect(() => {
+    if (inputRef.current && isOpen) {
+      setDropdownIsOpen(isOpen);
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     const { value, selectionStart } = e.target;
@@ -229,6 +236,7 @@ MentionsInput.propTypes = {
   ).isRequired,
   experienceId: PropTypes.number,
   inputStyle: PropTypes.object,
+  isOpen: PropTypes.bool,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };
