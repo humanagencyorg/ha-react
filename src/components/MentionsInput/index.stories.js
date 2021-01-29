@@ -62,6 +62,12 @@ Textarea.args = {
   readOnly: false,
 };
 
+export const TextareaWithError = Template.bind({});
+TextareaWithError.args = {
+  ...Textarea.args,
+  error: 'can\'t be blank',
+};
+
 export const TextareaWithCustomStyles = Template.bind({});
 TextareaWithCustomStyles.args = {
   ...Textarea.args,
@@ -91,6 +97,12 @@ ReadonlyWithCustomStyles.args = {
     borderTopLeftRadius: '0px',
     background: '#fceef5',
   },
+};
+
+export const ReadonlyInitiallyOpen = Template.bind({});
+ReadonlyInitiallyOpen.args = {
+  ...ReadonlySelector.args,
+  isOpen: true,
 };
 
 export const ReadonlyWithSkippedField = Template.bind({});
