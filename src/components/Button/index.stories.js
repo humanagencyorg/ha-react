@@ -17,6 +17,8 @@ export default {
   },
 };
 
+const StandardButtonTemplate = (args) => <Button {...args} />;
+const ButtonWithLongTitleTemplate = (args) => <Button {...args} />;
 const PrimaryTemplate = (args) => <PrimaryButton {...args} />;
 const SubmissionTemplate = (args) => <SubmissionButton {...args} />;
 const NewItemTemplate = (args) => <NewItemButton {...args} />;
@@ -27,6 +29,17 @@ const ChatbotLoadingTemplate = (args) => <ChatbotLoadingButton {...args} />;
 export const Primary = PrimaryTemplate.bind({});
 Primary.args = {
   children: 'Save Changes',
+  responsive: true,
+};
+
+export const StandardButton = StandardButtonTemplate.bind({});
+StandardButton.args = {
+  children: 'Save Changes',
+};
+
+export const ButtonWithLongTitle = ButtonWithLongTitleTemplate.bind({});
+ButtonWithLongTitle.args = {
+  children: 'Very very very very very very very very very very very very long title of the button',
   responsive: true,
 };
 

@@ -5,7 +5,6 @@ export const StyledButton = styled.button.attrs((props) => ({
   type: props.type || 'button',
 }))`
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
@@ -20,6 +19,10 @@ export const StyledButton = styled.button.attrs((props) => ({
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   transition: background-color 150ms ease;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
 
   &:hover {
     color: #727278;
