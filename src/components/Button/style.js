@@ -5,7 +5,6 @@ export const StyledButton = styled.button.attrs((props) => ({
   type: props.type || 'button',
 }))`
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
@@ -20,6 +19,10 @@ export const StyledButton = styled.button.attrs((props) => ({
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   transition: background-color 150ms ease;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
 
   &:hover {
     color: #727278;
@@ -116,6 +119,7 @@ export const StyledNewItemButton = styled(StyledButton)`
   border-width: 1px;
   border-style: dashed;
   border-color: rgba(255, 255, 255, 0.6);
+  display: flex;
   margin: ${(props) => (props.noMargin ? '0' : '0.5rem 0 1rem 0')};
 
   &:hover {
