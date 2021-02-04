@@ -119,6 +119,7 @@ export const StyledNewItemButton = styled(StyledButton)`
   border-width: 1px;
   border-style: dashed;
   border-color: rgba(255, 255, 255, 0.6);
+  display: flex;
   margin: ${(props) => (props.noMargin ? '0' : '0.5rem 0 1rem 0')};
 
   &:hover {
