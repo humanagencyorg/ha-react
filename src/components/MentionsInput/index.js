@@ -16,7 +16,7 @@ export const MentionsInput = ({
   experienceId,
   inputStyle,
   isOpen,
-  noEndSpace,
+  noTrailingSpace,
   error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
@@ -126,7 +126,7 @@ export const MentionsInput = ({
           `${currentStep.referencePrefix}${item}`;
       })
       .filter((item) => item.length > 0);
-    const reference = `{{${referenceKeys.join('.')}}}${noEndSpace ? '' : ' '}`;
+    const reference = `{{${referenceKeys.join('.')}}}${noTrailingSpace ? '' : ' '}`;
 
     if (readOnly) {
       const value = reference.trim();
@@ -238,7 +238,7 @@ MentionsInput.propTypes = {
   experienceId: PropTypes.number,
   inputStyle: PropTypes.object,
   isOpen: PropTypes.bool,
-  noEndSpace: PropTypes.bool,
+  noTrailingSpace: PropTypes.bool,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };

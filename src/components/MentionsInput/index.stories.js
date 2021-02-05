@@ -66,7 +66,7 @@ export const Input = Template.bind({});
 Input.args = {
   ...Textarea.args,
   textarea: false,
-  noEndSpace: true,
+  noTrailingSpace: true,
 };
 
 export const TextareaWithError = Template.bind({});
