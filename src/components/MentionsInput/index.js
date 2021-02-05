@@ -16,6 +16,7 @@ export const MentionsInput = ({
   experienceId,
   inputStyle,
   isOpen,
+  noSpace,
   error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
@@ -125,7 +126,7 @@ export const MentionsInput = ({
           `${currentStep.referencePrefix}${item}`;
       })
       .filter((item) => item.length > 0);
-    const reference = `{{${referenceKeys.join('.')}}} `;
+    const reference = `{{${referenceKeys.join('.')}}}${noSpace ? '' : ' '}`;
 
     if (readOnly) {
       const value = reference.trim();
