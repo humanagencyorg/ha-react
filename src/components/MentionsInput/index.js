@@ -238,6 +238,7 @@ MentionsInput.propTypes = {
   experienceId: PropTypes.number,
   inputStyle: PropTypes.object,
   isOpen: PropTypes.bool,
+  noSpace: PropTypes.bool,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };
