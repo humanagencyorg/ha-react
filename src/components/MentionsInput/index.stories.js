@@ -62,6 +62,13 @@ Textarea.args = {
   readOnly: false,
 };
 
+export const Input = Template.bind({});
+Input.args = {
+  ...Textarea.args,
+  textarea: false,
+  noTrailingSpace: true,
+};
+
 export const TextareaWithError = Template.bind({});
 TextareaWithError.args = {
   ...Textarea.args,
