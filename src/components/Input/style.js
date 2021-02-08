@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const StyledInput = styled.input.attrs((props) => ({
   type: props.type || 'text',
 }))`
-  background-color: ${props => props.backgroundColor ? props.backgroundColor : '#fff'};
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : '#fff'};
   padding: 0.5rem;
   padding-left: 15px;
   padding-right: 15px;
@@ -34,9 +35,9 @@ export const StyledChatbotPhoneInput = styled.input.attrs((props) => ({
     border-width: 0;
     width: 100%;
     margin: 0;
-    color: #FFF;
+    color: #fff;
     flex: 1;
-    border-radius: ${props => props.actionButton ? '8px 0 0 8px' : '8px'};
+    border-radius: ${(props) => (props.actionButton ? '8px 0 0 8px' : '8px')};
     line-height: 2;
 
     &:disabled {
@@ -75,14 +76,14 @@ export const InputWrapper = styled.div`
   display: flex;
   align-items: stretch;
   position: relative;
-  margin: ${ props => props.noMargin ? '0' : '0.5rem 0 1rem 0' };
+  margin: ${(props) => (props.noMargin ? '0' : '0.5rem 0 1rem 0')};
   width: 100%;
 `;
 
 export const StyledErrorMessage = styled.span`
   border-radius: 5px;
   text-align: center;
-  background-color: #E74C0A;
+  background-color: #e74c0a;
   font-size: 12px;
   padding: 3px 9px;
   position: absolute;
@@ -97,11 +98,11 @@ export const InputPrefix = styled.span`
   justify-content: center;
   width: 3rem;
   background-color: rgba(53, 53, 63, 0.45);
-  color: #fff; 
+  color: #fff;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   line-height: 2;
-  
+
   img {
     display: flex;
   }
@@ -114,11 +115,10 @@ export const InputPrefixInline = styled(InputPrefix)`
 
 export const ColorBox = styled.div`
   border-radius: 8px;
-  background-color: ${ props => props.color ? props.color : '#0078F5' };
+  background-color: ${(props) => (props.color ? props.color : '#0078F5')};
   position: absolute;
   width: 2rem;
   height: 2rem;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 `;
-

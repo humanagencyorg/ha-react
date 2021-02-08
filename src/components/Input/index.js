@@ -18,7 +18,12 @@ export const Input = React.forwardRef((props, ref) => {
   return (
     <InputWrapper noMargin={props.noMargin}>
       {props.isLoading && <Loader {...props} />}
-      <StyledInput {...props} ref={ref} style={props.inputStyle} />
+      <StyledInput
+        {...props}
+        ref={ref}
+        style={props.inputStyle}
+        autoComplete="off"
+      />
       {props.error ? (
         <StyledErrorMessage>{props.error}</StyledErrorMessage>
       ) : null}
