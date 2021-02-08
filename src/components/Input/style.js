@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledInput = styled.input.attrs((props) => ({
   type: props.type || 'text',
+  autoComplete: props.noAutocomplete && 'nope',
 }))`
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : '#fff'};

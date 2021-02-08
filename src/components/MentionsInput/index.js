@@ -17,6 +17,7 @@ export const MentionsInput = ({
   inputStyle,
   isOpen,
   noTrailingSpace,
+  noAutocomplete,
   error,
 }) => {
   const [inputValue, setInputValue] = useState(defaultValue || '');
@@ -169,6 +170,7 @@ export const MentionsInput = ({
     onChange: handleInputChange,
     onKeyDown: handleKeyDown,
     ref: inputRef,
+    noAutocomplete,
   };
 
   if (readOnly) {
@@ -239,6 +241,7 @@ MentionsInput.propTypes = {
   inputStyle: PropTypes.object,
   isOpen: PropTypes.bool,
   noTrailingSpace: PropTypes.bool,
+  noAutocomplete: PropTypes.bool,
   textarea: PropTypes.bool,
   readOnly: PropTypes.bool,
 };
