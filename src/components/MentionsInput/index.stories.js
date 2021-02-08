@@ -69,6 +69,12 @@ Input.args = {
   noTrailingSpace: true,
 };
 
+export const InputWithoutAutocomplete = Template.bind({});
+InputWithoutAutocomplete.args = {
+  ...Input.args,
+  noAutocomplete: true,
+};
+
 export const TextareaWithError = Template.bind({});
 TextareaWithError.args = {
   ...Textarea.args,

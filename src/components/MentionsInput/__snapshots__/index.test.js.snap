@@ -133,7 +133,6 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
             className="c0"
           >
             <styled.input
-              autoComplete="off"
               autocomplete="off"
               inputStyle={
                 Object {
@@ -155,7 +154,6 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
               value="title"
             >
               <StyledComponent
-                autoComplete="off"
                 autocomplete="off"
                 forwardedComponent={
                   Object {
@@ -224,7 +222,6 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
 }
 
 <input
-                      autocomplete="off"
                       class="c0"
                       name="Name"
                       placeholder="placeholder"
@@ -255,7 +252,6 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
                 value="title"
               >
                 <input
-                  autoComplete="off"
                   className="c1"
                   name="Name"
                   onChange={[Function]}
@@ -517,7 +513,6 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
             className="c0"
           >
             <styled.input
-              autoComplete="off"
               autocomplete="off"
               inputStyle={
                 Object {
@@ -545,7 +540,6 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
               value="title"
             >
               <StyledComponent
-                autoComplete="off"
                 autocomplete="off"
                 forwardedComponent={
                   Object {
@@ -614,7 +608,6 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
 }
 
 <input
-                      autocomplete="off"
                       class="c0"
                       name="Name"
                       placeholder="placeholder"
@@ -651,7 +644,6 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
                 value="title"
               >
                 <input
-                  autoComplete="off"
                   className="c1"
                   name="Name"
                   onChange={[Function]}
@@ -919,7 +911,6 @@ exports[`MentionsInput component when textarea prop is false with error matches 
             className="c0"
           >
             <styled.input
-              autoComplete="off"
               autocomplete="off"
               error="error"
               inputStyle={
@@ -942,7 +933,6 @@ exports[`MentionsInput component when textarea prop is false with error matches 
               value="title"
             >
               <StyledComponent
-                autoComplete="off"
                 autocomplete="off"
                 error="error"
                 forwardedComponent={
@@ -1012,7 +1002,6 @@ exports[`MentionsInput component when textarea prop is false with error matches 
 }
 
 <input
-                      autocomplete="off"
                       class="c0"
                       name="Name"
                       placeholder="placeholder"
@@ -1043,7 +1032,6 @@ exports[`MentionsInput component when textarea prop is false with error matches 
                 value="title"
               >
                 <input
-                  autoComplete="off"
                   className="c1"
                   name="Name"
                   onChange={[Function]}
