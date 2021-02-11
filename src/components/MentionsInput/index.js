@@ -25,6 +25,7 @@ export const MentionsInput = ({
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [mentionSymbolPosition, setMentionSymbolPosition] = useState(0);
   const [currentReference, setCurrentReference] = useState('');
+  const [newReferenceCreated, setNewReferenceCreated] = useState(false);
   const inputRef = useRef(null);
   const currentItemRef = useRef(null);
   const listRef = useRef(null);
@@ -132,6 +133,7 @@ export const MentionsInput = ({
       noTrailingSpace ? '' : ' '
     }`;
     setCurrentReference(reference);
+    setNewReferenceCreated(true);
 
     if (readOnly) {
       const value = reference.trim();
@@ -162,9 +164,10 @@ export const MentionsInput = ({
     }
   };
 
-  useEffect(() => setCursorPosition(currentReference.length), [
-    currentReference,
-  ]);
+  useEffect(() => {
+    setCursorPosition(currentReference.length);
+    setNewReferenceCreated(false);
+  }, [currentReference, newReferenceCreated]);
 
   const handleClearInput = () => {
     if (onValueChange) {
@@ -240,10 +243,7 @@ MentionsInput.propTypes = {
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
   onValueChange: PropTypes.func,
-  error: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.array,
-  ]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string,
