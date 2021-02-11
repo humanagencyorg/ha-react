@@ -152,12 +152,12 @@ export const MentionsInput = ({
     setDropdownIsOpen(false);
   };
 
-  const setCursorPosition = (referenceLenght) => {
+  const setCursorPosition = (referenceLength) => {
     if (inputRef.current) {
       inputRef.current.focus();
       inputRef.current.setSelectionRange(
-        mentionSymbolPosition + referenceLenght,
-        mentionSymbolPosition + referenceLenght,
+        mentionSymbolPosition + referenceLength,
+        mentionSymbolPosition + referenceLength,
       );
     }
   };
