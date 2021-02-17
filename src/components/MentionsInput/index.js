@@ -24,6 +24,8 @@ export const MentionsInput = ({
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [mentionSymbolPosition, setMentionSymbolPosition] = useState(0);
+  const [currentReference, setCurrentReference] = useState('');
+  const [newReferenceCreated, setNewReferenceCreated] = useState(false);
   const inputRef = useRef(null);
   const currentItemRef = useRef(null);
   const listRef = useRef(null);
@@ -31,7 +33,7 @@ export const MentionsInput = ({
   useEffect(() => {
     if (inputRef.current && isOpen) {
       setDropdownIsOpen(isOpen);
-    };
+    }
   }, []);
 
   const handleInputChange = (e) => {
@@ -127,7 +129,11 @@ export const MentionsInput = ({
           `${currentStep.referencePrefix}${item}`;
       })
       .filter((item) => item.length > 0);
-    const reference = `{{${referenceKeys.join('.')}}}${noTrailingSpace ? '' : ' '}`;
+    const reference = `{{${referenceKeys.join('.')}}}${
+      noTrailingSpace ? '' : ' '
+    }`;
+    setCurrentReference(reference);
+    setNewReferenceCreated(true);
 
     if (readOnly) {
       const value = reference.trim();
@@ -146,11 +152,22 @@ export const MentionsInput = ({
     }
 
     setDropdownIsOpen(false);
+  };
 
+  const setCursorPosition = (referenceLength) => {
     if (inputRef.current) {
       inputRef.current.focus();
+      inputRef.current.setSelectionRange(
+        mentionSymbolPosition + referenceLength,
+        mentionSymbolPosition + referenceLength,
+      );
     }
   };
+
+  useEffect(() => {
+    setCursorPosition(currentReference.length);
+    setNewReferenceCreated(false);
+  }, [currentReference, newReferenceCreated]);
 
   const handleClearInput = () => {
     if (onValueChange) {
@@ -198,9 +215,7 @@ export const MentionsInput = ({
         {textarea ? (
           <>
             <Textarea {...inputProps} style={inputProps.inputStyle} />
-            {error ? (
-              <StyledErrorMessage>{error}</StyledErrorMessage>
-            ) : null}
+            {error ? <StyledErrorMessage>{error}</StyledErrorMessage> : null}
           </>
         ) : (
           <Input {...inputProps} />
@@ -228,7 +243,7 @@ MentionsInput.propTypes = {
   defaultValue: PropTypes.string,
   placeholder: PropTypes.string,
   onValueChange: PropTypes.func,
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string,
