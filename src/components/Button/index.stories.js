@@ -32,12 +32,6 @@ Primary.args = {
   responsive: true,
 };
 
-export const PrimaryDisabled = PrimaryTemplate.bind({});
-PrimaryDisabled.args = {
-  children: 'Disabled',
-  disabled: true,
-};
-
 export const StandardButton = StandardButtonTemplate.bind({});
 StandardButton.args = {
   children: 'Save Changes',
