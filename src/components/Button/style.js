@@ -92,6 +92,17 @@ export const StyledPrimaryButton = styled(StyledButton)`
         darken(0.1, '#0078F5')};
     color: #fff;
   }
+
+  &:disabled {
+    background-color: #333;
+    color: #bdbdbd;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #242424;
+      color: #9c9c9c;
+    }
+  }
 `;
 
 export const StyledSubmissionButton = styled(StyledPrimaryButton)`
