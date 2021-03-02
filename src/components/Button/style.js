@@ -97,6 +97,8 @@ export const StyledPrimaryButton = styled(StyledButton)`
     background-color: #333;
     color: #bdbdbd;
     cursor: not-allowed;
+    opacity: 1;
+    transition: color 150ms;
 
     &:hover {
       background-color: #242424;
