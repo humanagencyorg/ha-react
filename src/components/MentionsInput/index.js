@@ -155,7 +155,7 @@ export const MentionsInput = ({
   };
 
   const setCursorPosition = (referenceLength) => {
-    if (inputRef.current) {
+    if (inputRef.current && newReferenceCreated) {
       inputRef.current.focus();
       inputRef.current.setSelectionRange(
         mentionSymbolPosition + referenceLength,
