@@ -5,28 +5,29 @@ import { OptionsList } from './OptionsList';
 import { Input } from '../Input';
 import { StyledErrorMessage } from '../Input/style';
 
-export const MentionsInput = ({
-  name,
-  defaultValue,
-  placeholder,
-  textarea,
-  onValueChange,
-  steps,
-  readOnly,
-  experienceId,
-  inputStyle,
-  isOpen,
-  noTrailingSpace,
-  noAutocomplete,
-  error,
-}) => {
+export const MentionsInput = React.forwardRef((props, ref) => {
+  const {
+    name,
+    defaultValue,
+    placeholder,
+    textarea,
+    onValueChange,
+    steps,
+    readOnly,
+    experienceId,
+    inputStyle,
+    isOpen,
+    noTrailingSpace,
+    noAutocomplete,
+    error,
+  } = props;
   const [inputValue, setInputValue] = useState(defaultValue || '');
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [mentionSymbolPosition, setMentionSymbolPosition] = useState(0);
   const [currentReference, setCurrentReference] = useState('');
   const [newReferenceCreated, setNewReferenceCreated] = useState(false);
-  const inputRef = useRef(null);
+  const inputRef = ref || useRef(null);
   const currentItemRef = useRef(null);
   const listRef = useRef(null);
 
@@ -236,7 +237,7 @@ export const MentionsInput = ({
       )}
     </>
   );
-};
+});
 
 MentionsInput.propTypes = {
   name: PropTypes.string.isRequired,

@@ -30,6 +30,29 @@ describe('MentionsInput component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
 
+    it('sets ref value from props', () => {
+      const mockRef = jest.fn();
+      const steps = [
+        {
+          type: '',
+          title: '',
+          referencePrefix: '',
+          loadList: () => {},
+        },
+      ];
+      const props = {
+        steps,
+        name: 'Name',
+        textarea: true,
+        ref: mockRef,
+      };
+
+      const wrapper = mount(<MentionsInput {...props} />);
+      const textareaWrapper = wrapper.find("StyledComponent[name='Name']");
+
+      expect(textareaWrapper.prop('forwardedRef')).toEqual(mockRef);
+    });
+
     describe('with error', () => {
       it('matches snapshot', () => {
         const steps = [
@@ -113,6 +136,28 @@ describe('MentionsInput component', () => {
       const component = mount(<MentionsInput {...props} />);
 
       expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('sets ref value from props', () => {
+      const mockRef = jest.fn();
+      const steps = [
+        {
+          type: '',
+          title: '',
+          referencePrefix: '',
+          loadList: () => {},
+        },
+      ];
+      const props = {
+        steps,
+        name: 'Name',
+        ref: mockRef,
+      };
+
+      const wrapper = mount(<MentionsInput {...props} />);
+      const inputWrapper = wrapper.find("StyledComponent[name='Name']");
+
+      expect(inputWrapper.prop('forwardedRef')).toEqual(mockRef);
     });
 
     describe('with custom styles', () => {
