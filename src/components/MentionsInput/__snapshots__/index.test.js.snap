@@ -51,7 +51,7 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
   width: 100%;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   experienceId={1}
   name="Name"
@@ -367,7 +367,7 @@ exports[`MentionsInput component when textarea prop is false matches snaphot 1`]
       </StyledComponent>
     </Styled(X)>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
 
 exports[`MentionsInput component when textarea prop is false with custom styles matches snapshot 1`] = `
@@ -421,7 +421,7 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
   width: 100%;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   experienceId={1}
   inputStyle={
@@ -762,7 +762,7 @@ exports[`MentionsInput component when textarea prop is false with custom styles 
       </StyledComponent>
     </Styled(X)>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
 
 exports[`MentionsInput component when textarea prop is false with error matches snapshot 1`] = `
@@ -827,7 +827,7 @@ exports[`MentionsInput component when textarea prop is false with error matches 
   top: -13px;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   error="error"
   experienceId={1}
@@ -1189,7 +1189,7 @@ exports[`MentionsInput component when textarea prop is false with error matches 
       </StyledComponent>
     </Styled(X)>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
 
 exports[`MentionsInput component when textarea prop is true matches snaphot 1`] = `
@@ -1235,7 +1235,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
   color: #bdbdbd;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   experienceId={1}
   name="Name"
@@ -1394,7 +1394,7 @@ exports[`MentionsInput component when textarea prop is true matches snaphot 1`] 
       </StyledComponent>
     </Styled(styled.textarea)>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
 
 exports[`MentionsInput component when textarea prop is true with custom styles matches snapshot 1`] = `
@@ -1440,7 +1440,7 @@ exports[`MentionsInput component when textarea prop is true with custom styles m
   color: #bdbdbd;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   experienceId={1}
   inputStyle={
@@ -1642,7 +1642,7 @@ exports[`MentionsInput component when textarea prop is true with custom styles m
       </StyledComponent>
     </Styled(styled.textarea)>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
 
 exports[`MentionsInput component when textarea prop is true with error matches snapshot 1`] = `
@@ -1699,7 +1699,7 @@ exports[`MentionsInput component when textarea prop is true with error matches s
   top: -13px;
 }
 
-<MentionsInput
+<ForwardRef
   defaultValue="title"
   error="error"
   experienceId={1}
@@ -1903,5 +1903,5 @@ exports[`MentionsInput component when textarea prop is true with error matches s
       </StyledComponent>
     </styled.span>
   </div>
-</MentionsInput>
+</ForwardRef>
 `;
