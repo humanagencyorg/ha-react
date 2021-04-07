@@ -2,9 +2,6 @@ const primaryColor = '#0078f5';
 export const styles = {
   root: {
     width: '100%',
-    '&.MuiTextField-root': {
-      marginBottom: '8px',
-    },
 
     '& .MuiInput-formControl': {
       marginTop: 0,

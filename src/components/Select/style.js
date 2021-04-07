@@ -1,6 +1,5 @@
 export const componentStyles = {
   root: {
-    marginBottom: '8px',
     width: '100%',
 
     '& .MuiInput-formControl': {
