@@ -2,7 +2,7 @@ import React from 'react';
 import { DateSelector } from './index';
 
 export default {
-  title: 'DateSelector',
+  title: 'Material Design fields/DateSelector',
   component: DateSelector,
 };
 

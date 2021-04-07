@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from './index';
 
 export default {
-  title: 'TextField',
+  title: 'Material Design fields/TextField',
   component: TextField,
 };
 
