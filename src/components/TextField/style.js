@@ -1,5 +1,6 @@
 export const styles = {
   root: {
+    width: '100%',
     '&.MuiTextField-root': {
       marginBottom: '8px',
     },

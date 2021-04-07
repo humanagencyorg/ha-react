@@ -30,8 +30,6 @@ export const decorators = [
   (Story) => (
     <div
       style={{
-        display: 'flex',
-        flexDirection: 'column',
         maxWidth: '536px',
         margin: '0 auto',
         paddingTop: '1em',
