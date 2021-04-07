@@ -28,7 +28,15 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div style={{ maxWidth: '536px', margin: '0 auto', paddingTop: '1em' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '536px',
+        margin: '0 auto',
+        paddingTop: '1em',
+      }}
+    >
       <Story />
     </div>
   ),
