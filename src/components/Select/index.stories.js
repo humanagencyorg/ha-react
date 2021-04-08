@@ -56,3 +56,9 @@ Error.args = {
   helperText: 'Something went horribly wrong',
   error: true,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Default.args,
+  disabled: true,
+};

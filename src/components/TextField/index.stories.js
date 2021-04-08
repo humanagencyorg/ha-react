@@ -31,3 +31,9 @@ Error.args = {
   helperText: 'Get to the choppa!',
   error: true,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Default.args,
+  disabled: true,
+};
