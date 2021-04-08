@@ -5,8 +5,8 @@ exports[`DateSelector component with error matches snapshot 1`] = `
   className="MuiFormControl-root MuiTextField-root makeStyles-root-1"
 >
   <label
-    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-5 MuiInputLabel-formControl Mui-error Mui-error"
-    data-shrink={false}
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-5 MuiInputLabel-formControl MuiInputLabel-shrink Mui-error Mui-error"
+    data-shrink={true}
   >
     label
   </label>
