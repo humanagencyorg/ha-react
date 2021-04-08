@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField component with error matches snapshot 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root makeStyles-root-1"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-3 MuiInputLabel-formControl MuiInputLabel-shrink MuiInputLabel-filled Mui-error Mui-error"
+    data-shrink={true}
+  >
+    label
+  </label>
+  <div
+    className="MuiInputBase-root MuiFilledInput-root Mui-error Mui-error MuiInputBase-formControl"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={true}
+      autoFocus={false}
+      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2"
+      disabled={false}
+      name="name"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      type="text"
+    />
+  </div>
+  <p
+    className="MuiFormHelperText-root makeStyles-errorMessage-4 MuiFormHelperText-contained Mui-error"
+  >
+    error
+  </p>
+</div>
+`;
+
+exports[`TextField component without error matches snapshot 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root makeStyles-root-1"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-3 MuiInputLabel-formControl MuiInputLabel-filled"
+    data-shrink={false}
+  >
+    label
+  </label>
+  <div
+    className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoFocus={false}
+      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2"
+      disabled={false}
+      name="name"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;

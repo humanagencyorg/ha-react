@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Textarea } from '../globals';
-import { X, Search } from 'react-feather';
+import X from 'react-feather/dist/icons/x';
+import Search from 'react-feather/dist/icons/search';
 
 export const StyledTextarea = styled(Textarea)`
   border-radius: 8px 8px 0px 0px;

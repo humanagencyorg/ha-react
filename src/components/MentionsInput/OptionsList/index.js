@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import _isEmpty from 'lodash/isEmpty';
-import { Search } from 'react-feather';
+import Search from 'react-feather/dist/icons/search';
 
 export const useStyles = makeStyles((theme) => ({
   root: {
