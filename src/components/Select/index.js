@@ -81,7 +81,3 @@ Select.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
 };
-
-Select.defaultProps = {
-  options: [{ value: null, name: '' }],
-};
