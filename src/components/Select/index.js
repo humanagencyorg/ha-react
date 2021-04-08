@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _isNil from 'lodash/isNil';
-import { ChevronDown } from 'react-feather';
+import ChevronDown from 'react-feather/dist/icons/chevron-down';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
