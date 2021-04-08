@@ -137,4 +137,7 @@ export const styles = {
     borderRadius: '6px',
     zIndex: 1,
   },
+  hidden: {
+    display: 'none',
+  },
 };

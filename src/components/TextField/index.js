@@ -39,7 +39,7 @@ export const TextField = ({
           shrink: error,
         }}
         FormHelperTextProps={{
-          classes: { root: classes.errorMessage },
+          classes: { root: error ? classes.errorMessage : classes.hidden },
         }}
       />
     </>

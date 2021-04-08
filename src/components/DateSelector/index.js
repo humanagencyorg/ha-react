@@ -54,6 +54,7 @@ export const DateSelector = ({
         InputLabelProps={{
           disableAnimation: true,
           classes: { root: classes.label },
+          shrink: error,
         }}
         InputAdornmentProps={{
           classes: { root: classes.adornment },
@@ -62,7 +63,7 @@ export const DateSelector = ({
           classes: { dialog: classes.dialog },
         }}
         FormHelperTextProps={{
-          classes: { root: classes.errorMessage },
+          classes: { root: error ? classes.errorMessage : classes.hidden },
         }}
       />
     </MuiPickersUtilsProvider>
