@@ -49,13 +49,15 @@ export const styles = {
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
 
     '&:hover': {
-      borderColor: '#fff',
+      borderColor: '#f2f2f2',
     },
 
     '&:disabled': {
+      cursor: 'not-allowed',
+      backgroundColor: '#e6e6e6',
       '&:hover': {
         border: '1.5px solid',
-        borderColor: '#fff',
+        borderColor: '#f2f2f2',
       },
     },
 

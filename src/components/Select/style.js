@@ -75,7 +75,14 @@ export const inputStyles = {
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
 
     '&:hover': {
-      borderColor: '#fff',
+      borderColor: '#f2f2f2',
+    },
+
+    '&:disabled': {
+      '&:hover': {
+        border: '1.5px solid',
+        borderColor: '#f2f2f2',
+      },
     },
 
     '&:focus': {
