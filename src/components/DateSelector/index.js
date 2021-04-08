@@ -23,12 +23,8 @@ export const DateSelector = ({
   const classes = useStyles();
 
   useEffect(() => {
-    if (defaultValue) {
-      if (error) {
-        setSelectedDate(null);
-      } else {
-        setSelectedDate(defaultValue);
-      }
+    if (defaultValue && !error) {
+      setSelectedDate(defaultValue);
     }
   }, []);
 

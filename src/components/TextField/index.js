@@ -18,31 +18,29 @@ export const TextField = ({
   const classes = useStyles();
 
   return (
-    <>
-      <MUITextField
-        name={name}
-        defaultValue={defaultValue}
-        label={label}
-        error={error}
-        disabled={disabled}
-        variant="filled"
-        helperText={helperText}
-        onFocus={onFocus}
-        className={classes.root}
-        InputProps={{
-          disableUnderline: true,
-          classes: { input: classes.input },
-        }}
-        InputLabelProps={{
-          disableAnimation: true,
-          classes: { root: classes.label },
-          shrink: error,
-        }}
-        FormHelperTextProps={{
-          classes: { root: error ? classes.errorMessage : classes.hidden },
-        }}
-      />
-    </>
+    <MUITextField
+      name={name}
+      defaultValue={defaultValue}
+      label={label}
+      error={error}
+      disabled={disabled}
+      variant="filled"
+      helperText={helperText}
+      onFocus={onFocus}
+      className={classes.root}
+      InputProps={{
+        disableUnderline: true,
+        classes: { input: classes.input },
+      }}
+      InputLabelProps={{
+        disableAnimation: true,
+        classes: { root: classes.label },
+        shrink: error,
+      }}
+      FormHelperTextProps={{
+        classes: { root: error ? classes.errorMessage : classes.hidden },
+      }}
+    />
   );
 };
 
