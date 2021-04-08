@@ -71,7 +71,7 @@ export const inputStyles = {
     padding: '20px 16px 6px',
     borderRadius: '8px',
     border: '1.5px solid',
-    borderColor: '#fff',
+    borderColor: '#f2f2f2',
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
 
     '&:hover': {
