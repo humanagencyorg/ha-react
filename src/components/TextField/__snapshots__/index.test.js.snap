@@ -17,7 +17,7 @@ exports[`TextField component with error matches snapshot 1`] = `
     <input
       aria-invalid={true}
       autoFocus={false}
-      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2"
+      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2 makeStyles-input-7"
       disabled={false}
       name="name"
       onAnimationStart={[Function]}
@@ -53,7 +53,7 @@ exports[`TextField component without error matches snapshot 1`] = `
     <input
       aria-invalid={false}
       autoFocus={false}
-      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2"
+      className="MuiInputBase-input MuiFilledInput-input makeStyles-input-2 makeStyles-input-6"
       disabled={false}
       name="name"
       onAnimationStart={[Function]}

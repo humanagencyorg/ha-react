@@ -30,6 +30,9 @@ export const componentStyles = {
     '& .MuiNativeSelect-select.MuiNativeSelect-select': {
       paddingRight: '44px',
     },
+    '& .MuiNativeSelect-select.MuiNativeSelect-select:focus': {
+      borderColor: ({ customColor }) => (customColor ? customColor : '#0078f5'),
+    },
   },
   label: {
     width: 'calc(100% - 60px)',
@@ -87,7 +90,6 @@ export const inputStyles = {
 
     '&:focus': {
       background: '#fff',
-      borderColor: '#0078f5',
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
       borderRadius: '8px',
     },

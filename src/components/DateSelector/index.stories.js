@@ -26,6 +26,12 @@ DefaultValue.args = {
     '12/29/1999',
 };
 
+export const CustomColor = Template.bind({});
+CustomColor.args = {
+  ...Default.args,
+  customColor: 'turquoise',
+};
+
 export const Error = Template.bind({});
 Error.args = {
   ...Default.args,

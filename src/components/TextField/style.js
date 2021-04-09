@@ -63,7 +63,7 @@ export const styles = {
 
     '&:focus': {
       background: '#fff',
-      borderColor: '#0078f5',
+      borderColor: ({ customColor }) => (customColor ? customColor : '#0078f5'),
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
     },
   },

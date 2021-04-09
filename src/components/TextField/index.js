@@ -12,10 +12,11 @@ export const TextField = ({
   label,
   error,
   helperText,
+  customColor,
   onFocus,
   disabled,
 }) => {
-  const classes = useStyles();
+  const classes = useStyles({ customColor });
 
   return (
     <MUITextField
@@ -49,6 +50,7 @@ TextField.propTypes = {
   defaultValue: PropTypes.string,
   onFocus: PropTypes.func,
   helperText: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  customColor: PropTypes.string,
   label: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
