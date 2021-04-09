@@ -25,6 +25,12 @@ LongValue.args = {
   defaultValue: 'Mama always said life was like a box of chocolates. You never know what you\'re gonna get.',
 };
 
+export const CustomColor = Template.bind({});
+CustomColor.args = {
+  ...Default.args,
+  customColor: 'turquoise',
+};
+
 export const Error = Template.bind({});
 Error.args = {
   ...Default.args,

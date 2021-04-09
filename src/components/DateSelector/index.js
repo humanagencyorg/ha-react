@@ -16,11 +16,12 @@ export const DateSelector = ({
   defaultValue,
   onFocus,
   helperText,
+  customColor,
   error,
   disabled,
 }) => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const classes = useStyles();
+  const classes = useStyles({ customColor });
 
   useEffect(() => {
     if (defaultValue && !error) {
@@ -71,6 +72,7 @@ DateSelector.propTypes = {
   defaultValue: PropTypes.string,
   onFocus: PropTypes.func,
   helperText: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  customColor: PropTypes.string,
   label: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,

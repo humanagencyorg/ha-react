@@ -20,13 +20,14 @@ export const Select = ({
   defaultValue,
   onFocus,
   helperText,
+  customColor,
   error,
   disabled,
 }) => {
+  const classes = useStyles({ customColor });
   const [value, setValue] = React.useState(
     _isNil(defaultValue) ? '' : defaultValue,
   );
-  const classes = useStyles();
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -77,6 +78,7 @@ Select.propTypes = {
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   onFocus: PropTypes.func,
   helperText: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  customColor: PropTypes.string,
   label: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,

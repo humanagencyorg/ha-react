@@ -1,4 +1,5 @@
 const primaryColor = '#0078f5';
+
 export const styles = {
   root: {
     width: '100%',
@@ -64,7 +65,8 @@ export const styles = {
 
     '&:focus': {
       background: '#fff',
-      borderColor: primaryColor,
+      borderColor: ({ customColor }) =>
+        customColor ? customColor : primaryColor,
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
     },
   },
@@ -77,7 +79,8 @@ export const styles = {
 
       '&:hover': {
         color: '#fff',
-        backgroundColor: primaryColor,
+        backgroundColor: ({ customColor }) =>
+          customColor ? customColor : primaryColor,
       },
     },
 
@@ -90,24 +93,26 @@ export const styles = {
       width: 'auto',
     },
     '& .MuiPickersToolbar-toolbar': {
-      backgroundColor: primaryColor,
+      backgroundColor: ({ customColor }) =>
+        customColor ? customColor : primaryColor,
     },
     '& .MuiPickersDay-daySelected': {
-      backgroundColor: primaryColor,
+      backgroundColor: ({ customColor }) =>
+        customColor ? customColor : primaryColor,
     },
     '& .MuiPickersToolbarButton-toolbarBtn': {
       width: 'auto',
     },
     '& .MuiButtonBase-root:not(.MuiPickersDay-daySelected)': {
       '&:hover': {
-        color: primaryColor,
+        color: ({ customColor }) => (customColor ? customColor : primaryColor),
       },
     },
     '& + .MuiDialogActions-root .MuiButton-textPrimary': {
       width: 'auto',
-      color: primaryColor,
+      color: ({ customColor }) => (customColor ? customColor : primaryColor),
       '&:hover': {
-        color: primaryColor,
+        color: ({ customColor }) => (customColor ? customColor : primaryColor),
       },
     },
   },
