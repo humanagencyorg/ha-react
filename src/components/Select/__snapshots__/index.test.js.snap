@@ -2,7 +2,7 @@
 
 exports[`Select component with error matches snapshot 1`] = `
 <div
-  className="MuiFormControl-root makeStyles-root-1"
+  className="MuiFormControl-root makeStyles-root-1 makeStyles-root-8"
 >
   <label
     className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-2 MuiInputLabel-formControl MuiInputLabel-animated Mui-error Mui-error"
@@ -17,7 +17,7 @@ exports[`Select component with error matches snapshot 1`] = `
   >
     <select
       aria-invalid={true}
-      className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-6"
+      className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-7"
       disabled={false}
       id="data_response_country"
       name="name"
@@ -61,7 +61,7 @@ exports[`Select component with error matches snapshot 1`] = `
 
 exports[`Select component without error matches snapshot 1`] = `
 <div
-  className="MuiFormControl-root makeStyles-root-1"
+  className="MuiFormControl-root makeStyles-root-1 makeStyles-root-6"
 >
   <label
     className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-2 MuiInputLabel-formControl MuiInputLabel-animated"
@@ -76,7 +76,7 @@ exports[`Select component without error matches snapshot 1`] = `
   >
     <select
       aria-invalid={false}
-      className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-6"
+      className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-7"
       disabled={false}
       id="data_response_country"
       name="name"

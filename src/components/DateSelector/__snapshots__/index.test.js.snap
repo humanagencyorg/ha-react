@@ -17,7 +17,7 @@ exports[`DateSelector component with error matches snapshot 1`] = `
     <input
       aria-invalid={true}
       autoFocus={false}
-      className="MuiInputBase-input MuiInput-input makeStyles-input-2 MuiInputBase-inputAdornedEnd"
+      className="MuiInputBase-input MuiInput-input makeStyles-input-2 makeStyles-input-11 MuiInputBase-inputAdornedEnd"
       disabled={false}
       name="name"
       onAnimationStart={[Function]}
@@ -29,7 +29,7 @@ exports[`DateSelector component with error matches snapshot 1`] = `
       value=""
     />
     <div
-      className="MuiInputAdornment-root makeStyles-adornment-3 MuiInputAdornment-positionEnd"
+      className="MuiInputAdornment-root makeStyles-adornment-3 makeStyles-adornment-12 MuiInputAdornment-positionEnd"
     >
       <button
         className="MuiButtonBase-root MuiIconButton-root"
@@ -98,7 +98,7 @@ exports[`DateSelector component without error matches snapshot 1`] = `
     <input
       aria-invalid={false}
       autoFocus={false}
-      className="MuiInputBase-input MuiInput-input makeStyles-input-2 MuiInputBase-inputAdornedEnd"
+      className="MuiInputBase-input MuiInput-input makeStyles-input-2 makeStyles-input-8 MuiInputBase-inputAdornedEnd"
       disabled={false}
       name="name"
       onAnimationStart={[Function]}
@@ -110,7 +110,7 @@ exports[`DateSelector component without error matches snapshot 1`] = `
       value=""
     />
     <div
-      className="MuiInputAdornment-root makeStyles-adornment-3 MuiInputAdornment-positionEnd"
+      className="MuiInputAdornment-root makeStyles-adornment-3 makeStyles-adornment-9 MuiInputAdornment-positionEnd"
     >
       <button
         className="MuiButtonBase-root MuiIconButton-root"
