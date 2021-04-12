@@ -132,9 +132,9 @@ export const MentionsInput = React.forwardRef((props, ref) => {
     const referenceKeys = items
       .map((item, index) => {
         const currentStep = steps[index];
-        return currentStep.skipFieldRender
-          ? ''
-          : `${currentStep.referencePrefix}${item}`;
+        return currentStep.skipFieldRender ?
+          '' :
+          `${currentStep.referencePrefix}${item}`;
       })
       .filter((item) => item.length > 0);
     const reference = `{{${referenceKeys.join('.')}}}${
