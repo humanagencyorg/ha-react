@@ -69,6 +69,12 @@ Input.args = {
   noTrailingSpace: true,
 };
 
+export const InputWithDefaultValue = Template.bind({});
+InputWithDefaultValue.args = {
+  ...Input.args,
+  defaultValue: 'Well, hello there',
+};
+
 export const InputWithoutAutocomplete = Template.bind({});
 InputWithoutAutocomplete.args = {
   ...Input.args,
@@ -78,7 +84,7 @@ InputWithoutAutocomplete.args = {
 export const TextareaWithError = Template.bind({});
 TextareaWithError.args = {
   ...Textarea.args,
-  error: 'can\'t be blank',
+  error: "can't be blank",
 };
 
 export const TextareaWithCustomStyles = Template.bind({});
@@ -127,7 +133,7 @@ ReadonlyWithSkippedField.args = {
 export const ReadonlySelectorWithError = Template.bind({});
 ReadonlySelectorWithError.args = {
   ...ReadonlySelector.args,
-  error: 'can\'t be blank',
+  error: "can't be blank",
 };
 
 export const WithOneStep = Template.bind({});
