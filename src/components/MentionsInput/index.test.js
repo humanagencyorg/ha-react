@@ -160,6 +160,37 @@ describe('MentionsInput component', () => {
       expect(inputWrapper.prop('forwardedRef')).toEqual(mockRef);
     });
 
+    it('sets default value after prop changed', () => {
+      const defaultValue = 'value';
+      const newDefaultValue = 'new value';
+      const steps = [
+        {
+          type: '',
+          title: '',
+          referencePrefix: '',
+          loadList: () => {},
+        },
+      ];
+      const props = {
+        steps,
+        name: 'Name',
+        defaultValue,
+        experienceId: 1,
+        textarea: false,
+      };
+
+      const wrapper = mount(<MentionsInput {...props} />);
+      const inputWrapper = wrapper.find("StyledComponent[name='Name']");
+
+      expect(inputWrapper.prop('value')).toEqual(defaultValue);
+
+      wrapper.setProps({ defaultValue: newDefaultValue });
+      wrapper.update();
+
+      const reFoundInputWrapper = wrapper.find("StyledComponent[name='Name']");
+      expect(reFoundInputWrapper.prop('value')).toEqual(newDefaultValue);
+    });
+
     describe('with custom styles', () => {
       it('matches snapshot', () => {
         const steps = [
