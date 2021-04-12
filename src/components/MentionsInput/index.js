@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import _isNil from 'lodash/isNil';
 import { StyledTextarea as Textarea, ClearIcon, SearchIcon } from './style';
 import { OptionsList } from './OptionsList';
 import { Input } from '../Input';
@@ -21,7 +22,7 @@ export const MentionsInput = React.forwardRef((props, ref) => {
     noAutocomplete,
     error,
   } = props;
-  const [inputValue, setInputValue] = useState(defaultValue || '');
+  const [inputValue, setInputValue] = useState('');
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [mentionSymbolPosition, setMentionSymbolPosition] = useState(0);
@@ -36,6 +37,12 @@ export const MentionsInput = React.forwardRef((props, ref) => {
       setDropdownIsOpen(isOpen);
     }
   }, []);
+
+  useEffect(() => {
+    if (!_isNil(defaultValue)) {
+      setInputValue(defaultValue);
+    }
+  }, [defaultValue]);
 
   const handleInputChange = (e) => {
     const { value, selectionStart } = e.target;
@@ -125,9 +132,9 @@ export const MentionsInput = React.forwardRef((props, ref) => {
     const referenceKeys = items
       .map((item, index) => {
         const currentStep = steps[index];
-        return currentStep.skipFieldRender ?
-          '' :
-          `${currentStep.referencePrefix}${item}`;
+        return currentStep.skipFieldRender
+          ? ''
+          : `${currentStep.referencePrefix}${item}`;
       })
       .filter((item) => item.length > 0);
     const reference = `{{${referenceKeys.join('.')}}}${

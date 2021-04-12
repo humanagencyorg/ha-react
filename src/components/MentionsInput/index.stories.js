@@ -69,6 +69,12 @@ Input.args = {
   noTrailingSpace: true,
 };
 
+export const InputWithDefaultValue = Template.bind({});
+InputWithDefaultValue.args = {
+  ...Input.args,
+  defaultValue: 'Well, hello there',
+};
+
 export const InputWithoutAutocomplete = Template.bind({});
 InputWithoutAutocomplete.args = {
   ...Input.args,
@@ -78,7 +84,7 @@ InputWithoutAutocomplete.args = {
 export const TextareaWithError = Template.bind({});
 TextareaWithError.args = {
   ...Textarea.args,
-  error: 'can\'t be blank',
+  error: "can't be blank",
 };
 
 export const TextareaWithCustomStyles = Template.bind({});
@@ -127,7 +133,7 @@ ReadonlyWithSkippedField.args = {
 export const ReadonlySelectorWithError = Template.bind({});
 ReadonlySelectorWithError.args = {
   ...ReadonlySelector.args,
-  error: 'can\'t be blank',
+  error: "can't be blank",
 };
 
 export const WithOneStep = Template.bind({});
@@ -137,7 +143,7 @@ WithOneStep.args = {
 };
 
 function getExperiencesList() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'First Experience', value: '1', subTitle: 'This Experience' },
       { title: 'Second Experience', value: '2' },
@@ -154,7 +160,7 @@ function getExperiencesList() {
 }
 
 function getBlocksList() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'Wonderwall', value: '1', subTitle: 'Multiple Choice' },
       {
@@ -177,7 +183,7 @@ function getBlocksList() {
 }
 
 function getMergeFields() {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve([
       { title: 'Full name', value: 'full_name' },
       { title: 'First name', value: 'first_name' },
