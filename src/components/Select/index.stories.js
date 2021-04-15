@@ -7,6 +7,11 @@ export default {
 };
 
 const Template = (args) => <Select {...args} />;
+const TemplateWithCustomFont = (args) => (
+  <div style={{ fontFamily: 'Impact, Tahoma, sans-serif' }}>
+    <Select {...args} />
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -67,4 +72,10 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   disabled: true,
+};
+
+export const CustomFontContainer = TemplateWithCustomFont.bind({});
+CustomFontContainer.args = {
+  ...Default.args,
+  label: 'Choose your fighter',
 };

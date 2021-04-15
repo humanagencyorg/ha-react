@@ -2,6 +2,10 @@ export const componentStyles = {
   root: {
     width: '100%',
 
+    '& .MuiInputBase-root': {
+      fontFamily: 'inherit',
+    },
+
     '& .MuiInput-formControl': {
       marginTop: 0,
       backgroundColor: 'transparent',
@@ -35,6 +39,7 @@ export const componentStyles = {
     },
   },
   label: {
+    fontFamily: 'inherit',
     width: 'calc(100% - 60px)',
     fontSize: '12px',
     lineHeight: 1.3,

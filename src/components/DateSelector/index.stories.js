@@ -7,6 +7,11 @@ export default {
 };
 
 const Template = (args) => <DateSelector {...args} />;
+const TemplateWithCustomFont = (args) => (
+  <div style={{ fontFamily: 'Impact, Tahoma, sans-serif' }}>
+    <DateSelector {...args} />
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -43,4 +48,9 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   disabled: true,
+};
+
+export const CustomFontContainer = TemplateWithCustomFont.bind({});
+CustomFontContainer.args = {
+  ...DefaultValue.args,
 };

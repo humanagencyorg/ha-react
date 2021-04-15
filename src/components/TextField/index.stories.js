@@ -7,6 +7,11 @@ export default {
 };
 
 const Template = (args) => <TextField {...args} />;
+const TemplateWithCustomFont = (args) => (
+  <div style={{ fontFamily: 'Impact, Tahoma, sans-serif' }}>
+    <TextField {...args} />
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -22,7 +27,8 @@ LongLabel.args = {
 export const LongValue = Template.bind({});
 LongValue.args = {
   ...Default.args,
-  defaultValue: 'Mama always said life was like a box of chocolates. You never know what you\'re gonna get.',
+  defaultValue:
+    "Mama always said life was like a box of chocolates. You never know what you're gonna get.",
 };
 
 export const CustomColor = Template.bind({});
@@ -42,4 +48,10 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   disabled: true,
+};
+
+export const CustomFontContainer = TemplateWithCustomFont.bind({});
+CustomFontContainer.args = {
+  label: 'Somebody once told me',
+  defaultValue: 'The world is gonna roll me',
 };
