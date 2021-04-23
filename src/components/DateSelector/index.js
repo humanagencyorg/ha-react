@@ -52,7 +52,6 @@ export const DateSelector = ({
         InputLabelProps={{
           disableAnimation: true,
           classes: { root: classes.label },
-          shrink: error,
         }}
         InputAdornmentProps={{
           classes: { root: classes.adornment },
