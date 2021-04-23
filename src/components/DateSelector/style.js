@@ -93,6 +93,7 @@ export const styles = {
     },
     '& .MuiPickersToolbar-toolbar': {
       display: 'flex',
+      height: '96px',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
