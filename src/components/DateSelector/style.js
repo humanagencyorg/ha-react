@@ -93,7 +93,7 @@ export const styles = {
     },
     '& .MuiPickersToolbar-toolbar': {
       display: 'flex',
-      height: '96px',
+      height: '76px',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -101,6 +101,11 @@ export const styles = {
     },
     '& .MuiPickersDay-daySelected': {
       backgroundColor: setCustomColor,
+    },
+    '& .MuiPickersCalendarHeader-iconButton': {
+      width: 'auto',
+      marginRight: '6px',
+      marginLeft: '6px',
     },
     '& .MuiPickersToolbarButton-toolbarBtn': {
       width: 'auto',
@@ -136,6 +141,9 @@ export const styles = {
       backgroundRepeat: 'no-repeat',
       width: '20px',
       height: '20px',
+    },
+    '& .MuiPickersYear-yearSelected': {
+      color: '#333',
     },
   },
   label: {
