@@ -45,6 +45,7 @@ export const DateSelector = ({
         className={classes.root}
         InputProps={{
           disableUnderline: true,
+          placeholder: 'MM/DD/YYYY',
           onFocus,
           classes: { input: classes.input },
         }}

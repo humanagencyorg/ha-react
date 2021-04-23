@@ -1,4 +1,5 @@
-const primaryColor = '#0078f5';
+const setCustomColor = ({ customColor }) =>
+  customColor ? customColor : '#0078f5';
 
 export const styles = {
   root: {
@@ -65,8 +66,7 @@ export const styles = {
 
     '&:focus': {
       background: '#fff',
-      borderColor: ({ customColor }) =>
-        customColor ? customColor : primaryColor,
+      borderColor: setCustomColor,
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)',
     },
   },
@@ -79,8 +79,7 @@ export const styles = {
 
       '&:hover': {
         color: '#fff',
-        backgroundColor: ({ customColor }) =>
-          customColor ? customColor : primaryColor,
+        backgroundColor: setCustomColor,
       },
     },
 
@@ -93,27 +92,50 @@ export const styles = {
       width: 'auto',
     },
     '& .MuiPickersToolbar-toolbar': {
-      backgroundColor: ({ customColor }) =>
-        customColor ? customColor : primaryColor,
+      display: 'flex',
+      height: '96px',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      backgroundColor: setCustomColor,
     },
     '& .MuiPickersDay-daySelected': {
-      backgroundColor: ({ customColor }) =>
-        customColor ? customColor : primaryColor,
+      backgroundColor: setCustomColor,
     },
     '& .MuiPickersToolbarButton-toolbarBtn': {
       width: 'auto',
     },
     '& .MuiButtonBase-root:not(.MuiPickersDay-daySelected)': {
       '&:hover': {
-        color: ({ customColor }) => (customColor ? customColor : primaryColor),
+        color: setCustomColor,
       },
     },
     '& + .MuiDialogActions-root .MuiButton-textPrimary': {
       width: 'auto',
-      color: ({ customColor }) => (customColor ? customColor : primaryColor),
+      color: setCustomColor,
       '&:hover': {
-        color: ({ customColor }) => (customColor ? customColor : primaryColor),
+        color: setCustomColor,
       },
+    },
+    '& .MuiPickersToolbarText-toolbarTxt': {
+      fontSize: '26px',
+      lineHeight: '1.235',
+      position: 'relative',
+      color: '#fff',
+    },
+    '& h6.MuiPickersToolbarText-toolbarTxt::after': {
+      display: 'block',
+      content: '""',
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      right: '-24px',
+      backgroundImage:
+        'url(\'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E\')',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      width: '20px',
+      height: '20px',
     },
   },
   label: {
