@@ -118,7 +118,7 @@ export const styles = {
       },
     },
     '& .MuiPickersToolbarText-toolbarTxt': {
-      fontSize: '24px',
+      fontSize: '26px',
       lineHeight: '1.235',
       position: 'relative',
       color: '#fff',
