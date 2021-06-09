@@ -1,4 +1,3 @@
-export { MentionsInput } from './MentionsInput';
 export {
   Input,
   ChatbotPhoneInput,
