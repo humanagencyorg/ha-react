@@ -44,7 +44,24 @@ exports[`Loader component when props provided matches snapshot 1`] = `
 <div
   className="c0"
   data-testid="some fake test id"
-  style="display: none;"
+  style={
+    Object {
+      "0": "d",
+      "1": "i",
+      "10": "o",
+      "11": "n",
+      "12": "e",
+      "13": ";",
+      "2": "s",
+      "3": "p",
+      "4": "l",
+      "5": "a",
+      "6": "y",
+      "7": ":",
+      "8": " ",
+      "9": "n",
+    }
+  }
 >
   <div
     className="css-0"
